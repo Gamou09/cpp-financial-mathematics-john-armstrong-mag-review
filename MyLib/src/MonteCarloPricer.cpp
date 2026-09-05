@@ -58,7 +58,7 @@ static void testPriceCallOption(){
 }
 
 /* define and test Price a put option */
-double MonteCarloPricer::price (const Path& putOption,
+double MonteCarloPricer::price (const PutOption& putOption,
                                 const BlackScholesModel& bsm) {
     
     double total = 0.0 ;

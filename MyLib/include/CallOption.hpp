@@ -24,8 +24,11 @@ public:
     double maturity ;
     
     // member function aka method
-    double payoff ( double stockAtMaturity) const ;
     double price ( const BlackScholesModel& bsm) const ;
+    
+    // function overriden from the interface
+    double payoff ( double stockAtMaturity) const override;
+    double getMaturity() const override;
 } ;
 
 void testCallOption() ;

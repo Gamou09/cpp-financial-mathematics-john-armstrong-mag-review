@@ -29,8 +29,8 @@ public:
     double price (const PutOption& putOption,
                   const BlackScholesModel& bsm) ;
     
-    /** Price a path independent option like Europreqn Put and Call  utilizing interface notion  **/
-    /** help avoid copy and easility extendable class by inherittance** /
+    /* Price a path independent option like Europreqn Put and Call  utilizing interface notion  */
+    /* help avoid copy and easility extendable class by inherittance */
     /* Price a PathIndependentOption */
     double price (const PathIndependentOption& option,
                                    const BlackScholesModel& bsm) ;

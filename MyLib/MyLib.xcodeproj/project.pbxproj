@@ -6,6 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C356BB5E304CA81200850E27 /* PutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5A304CA81200850E27 /* PutOption.cpp */; };
+		C356BB5F304CA81200850E27 /* CallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4C304CA81200850E27 /* CallOption.cpp */; };
+		C356BB60304CA81200850E27 /* testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5B304CA81200850E27 /* testing.cpp */; };
+		C356BB61304CA81200850E27 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB55304CA81200850E27 /* main.cpp */; };
+		C356BB62304CA81200850E27 /* chap_7_solutions_to_exercises.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */; };
+		C356BB63304CA81200850E27 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB53304CA81200850E27 /* geometry.cpp */; };
+		C356BB64304CA81200850E27 /* charts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB51304CA81200850E27 /* charts.cpp */; };
+		C356BB65304CA81200850E27 /* chap_7_classes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4E304CA81200850E27 /* chap_7_classes.cpp */; };
+		C356BB66304CA81200850E27 /* matlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB56304CA81200850E27 /* matlib.cpp */; };
+		C356BB67304CA81200850E27 /* LineChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB54304CA81200850E27 /* LineChart.cpp */; };
+		C356BB68304CA81200850E27 /* MonteCarloPricer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */; };
+		C356BB69304CA81200850E27 /* Polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB59304CA81200850E27 /* Polynomial.cpp */; };
+		C356BB6A304CA81200850E27 /* PieChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB58304CA81200850E27 /* PieChart.cpp */; };
+		C356BB6B304CA81200850E27 /* BlackScholesModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */; };
+		C356BB6C304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */; };
+		C356BB6D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */; };
+		C356BB6E304CA81200850E27 /* derivatives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB52304CA81200850E27 /* derivatives.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C325E04D2DDE62AB008A275E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +40,43 @@
 
 /* Begin PBXFileReference section */
 		C325E04F2DDE62AB008A275E /* MyLib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyLib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlackScholesModel.cpp; sourceTree = "<group>"; };
+		C356BB4C304CA81200850E27 /* CallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CallOption.cpp; sourceTree = "<group>"; };
+		C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chap_7_class_piechart_worldweb.cpp; sourceTree = "<group>"; };
+		C356BB4E304CA81200850E27 /* chap_7_classes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chap_7_classes.cpp; sourceTree = "<group>"; };
+		C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chap_7_classes_ofstream_strings.cpp; sourceTree = "<group>"; };
+		C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chap_7_solutions_to_exercises.cpp; sourceTree = "<group>"; };
+		C356BB51304CA81200850E27 /* charts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = charts.cpp; sourceTree = "<group>"; };
+		C356BB52304CA81200850E27 /* derivatives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = derivatives.cpp; sourceTree = "<group>"; };
+		C356BB53304CA81200850E27 /* geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		C356BB54304CA81200850E27 /* LineChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LineChart.cpp; sourceTree = "<group>"; };
+		C356BB55304CA81200850E27 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C356BB56304CA81200850E27 /* matlib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matlib.cpp; sourceTree = "<group>"; };
+		C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MonteCarloPricer.cpp; sourceTree = "<group>"; };
+		C356BB58304CA81200850E27 /* PieChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PieChart.cpp; sourceTree = "<group>"; };
+		C356BB59304CA81200850E27 /* Polynomial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Polynomial.cpp; sourceTree = "<group>"; };
+		C356BB5A304CA81200850E27 /* PutOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PutOption.cpp; sourceTree = "<group>"; };
+		C356BB5B304CA81200850E27 /* testing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testing.cpp; sourceTree = "<group>"; };
+		C356BB6F304CA87E00850E27 /* BlackScholesModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BlackScholesModel.hpp; sourceTree = "<group>"; };
+		C356BB70304CA87E00850E27 /* CallOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CallOption.hpp; sourceTree = "<group>"; };
+		C356BB71304CA87E00850E27 /* chap_7_class_piechart_worldweb.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chap_7_class_piechart_worldweb.hpp; sourceTree = "<group>"; };
+		C356BB72304CA87E00850E27 /* chap_7_classes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chap_7_classes.hpp; sourceTree = "<group>"; };
+		C356BB73304CA87E00850E27 /* chap_7_classes_ofstream_strings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chap_7_classes_ofstream_strings.hpp; sourceTree = "<group>"; };
+		C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chap_7_solutions_to_exercises.hpp; sourceTree = "<group>"; };
+		C356BB75304CA87E00850E27 /* charts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charts.h; sourceTree = "<group>"; };
+		C356BB76304CA87E00850E27 /* derivatives.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = derivatives.hpp; sourceTree = "<group>"; };
+		C356BB77304CA87E00850E27 /* geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = geometry.hpp; sourceTree = "<group>"; };
+		C356BB78304CA87E00850E27 /* LineChart.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LineChart.hpp; sourceTree = "<group>"; };
+		C356BB79304CA87E00850E27 /* matlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matlib.h; sourceTree = "<group>"; };
+		C356BB7A304CA87E00850E27 /* MonteCarloPricer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MonteCarloPricer.hpp; sourceTree = "<group>"; };
+		C356BB7B304CA87E00850E27 /* PathIndependentOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PathIndependentOption.hpp; sourceTree = "<group>"; };
+		C356BB7C304CA87E00850E27 /* PieChart.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PieChart.hpp; sourceTree = "<group>"; };
+		C356BB7D304CA87E00850E27 /* Polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Polynomial.hpp; sourceTree = "<group>"; };
+		C356BB7E304CA87E00850E27 /* PutOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PutOption.hpp; sourceTree = "<group>"; };
+		C356BB7F304CA87E00850E27 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		C356BB80304CA87E00850E27 /* testing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = testing.hpp; sourceTree = "<group>"; };
+		C356BB82304CA87E00850E27 /* MyLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MyLib.xcodeproj; sourceTree = "<group>"; };
+		C356BB83304CA87E00850E27 /* histogram_visualization_Simulated_S.ipynb */ = {isa = PBXFileReference; lastKnownFileType = text; path = histogram_visualization_Simulated_S.ipynb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -46,6 +103,12 @@
 			children = (
 				C325E0972DE88FC1008A275E /* output */,
 				C325E0502DDE62AB008A275E /* Products */,
+				C356BB5C304CA81200850E27 /* src */,
+				C356BB5D304CA81200850E27 /* tests */,
+				C356BB81304CA87E00850E27 /* include */,
+				C356BB82304CA87E00850E27 /* MyLib.xcodeproj */,
+				C356BB84304CA87E00850E27 /* notebooks */,
+				C356BB85304CA87E00850E27 /* notes */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +117,82 @@
 			children = (
 				C325E04F2DDE62AB008A275E /* MyLib */,
 			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C356BB5C304CA81200850E27 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */,
+				C356BB4C304CA81200850E27 /* CallOption.cpp */,
+				C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */,
+				C356BB4E304CA81200850E27 /* chap_7_classes.cpp */,
+				C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */,
+				C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */,
+				C356BB51304CA81200850E27 /* charts.cpp */,
+				C356BB52304CA81200850E27 /* derivatives.cpp */,
+				C356BB53304CA81200850E27 /* geometry.cpp */,
+				C356BB54304CA81200850E27 /* LineChart.cpp */,
+				C356BB55304CA81200850E27 /* main.cpp */,
+				C356BB56304CA81200850E27 /* matlib.cpp */,
+				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
+				C356BB58304CA81200850E27 /* PieChart.cpp */,
+				C356BB59304CA81200850E27 /* Polynomial.cpp */,
+				C356BB5A304CA81200850E27 /* PutOption.cpp */,
+				C356BB5B304CA81200850E27 /* testing.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C356BB5D304CA81200850E27 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		C356BB81304CA87E00850E27 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C356BB6F304CA87E00850E27 /* BlackScholesModel.hpp */,
+				C356BB70304CA87E00850E27 /* CallOption.hpp */,
+				C356BB71304CA87E00850E27 /* chap_7_class_piechart_worldweb.hpp */,
+				C356BB72304CA87E00850E27 /* chap_7_classes.hpp */,
+				C356BB73304CA87E00850E27 /* chap_7_classes_ofstream_strings.hpp */,
+				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
+				C356BB75304CA87E00850E27 /* charts.h */,
+				C356BB76304CA87E00850E27 /* derivatives.hpp */,
+				C356BB77304CA87E00850E27 /* geometry.hpp */,
+				C356BB78304CA87E00850E27 /* LineChart.hpp */,
+				C356BB79304CA87E00850E27 /* matlib.h */,
+				C356BB7A304CA87E00850E27 /* MonteCarloPricer.hpp */,
+				C356BB7B304CA87E00850E27 /* PathIndependentOption.hpp */,
+				C356BB7C304CA87E00850E27 /* PieChart.hpp */,
+				C356BB7D304CA87E00850E27 /* Polynomial.hpp */,
+				C356BB7E304CA87E00850E27 /* PutOption.hpp */,
+				C356BB7F304CA87E00850E27 /* stdafx.h */,
+				C356BB80304CA87E00850E27 /* testing.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C356BB84304CA87E00850E27 /* notebooks */ = {
+			isa = PBXGroup;
+			children = (
+				C356BB83304CA87E00850E27 /* histogram_visualization_Simulated_S.ipynb */,
+			);
+			path = notebooks;
+			sourceTree = "<group>";
+		};
+		C356BB85304CA87E00850E27 /* notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		C356BB86304CA87E00850E27 /* Products */ = {
+			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -89,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					C325E04E2DDE62AB008A275E = {
 						CreatedOnToolsVersion = 16.3;
@@ -108,6 +247,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C325E0502DDE62AB008A275E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C356BB86304CA87E00850E27 /* Products */;
+					ProjectRef = C356BB82304CA87E00850E27 /* MyLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C325E04E2DDE62AB008A275E /* MyLib */,
@@ -120,6 +265,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C356BB5E304CA81200850E27 /* PutOption.cpp in Sources */,
+				C356BB5F304CA81200850E27 /* CallOption.cpp in Sources */,
+				C356BB60304CA81200850E27 /* testing.cpp in Sources */,
+				C356BB61304CA81200850E27 /* main.cpp in Sources */,
+				C356BB62304CA81200850E27 /* chap_7_solutions_to_exercises.cpp in Sources */,
+				C356BB63304CA81200850E27 /* geometry.cpp in Sources */,
+				C356BB64304CA81200850E27 /* charts.cpp in Sources */,
+				C356BB65304CA81200850E27 /* chap_7_classes.cpp in Sources */,
+				C356BB66304CA81200850E27 /* matlib.cpp in Sources */,
+				C356BB67304CA81200850E27 /* LineChart.cpp in Sources */,
+				C356BB68304CA81200850E27 /* MonteCarloPricer.cpp in Sources */,
+				C356BB69304CA81200850E27 /* Polynomial.cpp in Sources */,
+				C356BB6A304CA81200850E27 /* PieChart.cpp in Sources */,
+				C356BB6B304CA81200850E27 /* BlackScholesModel.cpp in Sources */,
+				C356BB6C304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */,
+				C356BB6D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */,
+				C356BB6E304CA81200850E27 /* derivatives.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +322,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -178,12 +341,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
@@ -221,6 +386,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -233,11 +399,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -245,7 +413,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -254,7 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

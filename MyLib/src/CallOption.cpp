@@ -6,6 +6,8 @@
 //
 
 #include "stdafx.h"
+#include "CallOption.hpp"
+#include "matlib.h"
 
 // chap 8 - Implementation of payoff for a call option
 double CallOption::payoff( double stockAtMaturity) const {
@@ -32,6 +34,16 @@ double CallOption::price( const BlackScholesModel& bsm) const {
     return S*normcdf(d1) - K*exp(-r*T)*normcdf(d2);
 }
 
+double CallOption::getMaturity() const {
+    return maturity ;
+}
+
+
+// default constructor implementation
+CallOption::CallOption() : strike(0.0), maturity(0.0){}
+
+// Alternative constructor implementation
+CallOption::CallOption(double s, double m): strike(m), maturity(m){}
 
 static void testCallOptionPayoff(){
     
@@ -64,12 +76,6 @@ static void testCallOptionprice(){
     double price = callOption.price(bsm) ;
     ASSERT_APPROX_EQUAL(price, 4.046, 1e-2) ;
 }
-
-// default constructor implementation
-CallOption::CallOption() : strike(0.0), maturity(0.0){}
-
-// Alternative constructor implementation
-CallOption::CallOption(double s, double m): strike(m), maturity(m){}
 
 void testCallOption(){
     TEST( testCallOptionPayoff) ; 
