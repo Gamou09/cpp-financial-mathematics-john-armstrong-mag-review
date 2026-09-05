@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# C++ build artefacts
+*.o
+*.out
+*.exe
+*.dSYM
+
+# Build directories
+build/
+cmake-build-*/
+
+# Xcode
+DerivedData/
+*.xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# VS Code local settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
+
+# Microsoft Office temporary files
+~$*.doc
+~$*.docx
+~$*.xls
+~$*.xlsx
+~$*.ppt
+~$*.pptx
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated output files
+MyLib/output/
+output/

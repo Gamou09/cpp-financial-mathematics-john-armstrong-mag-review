@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC180FA41D3E8B2A009AE6D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180FA01D3E8B2A009AE6D4 /* main.cpp */; };
+		AC180FA51D3E8B2A009AE6D4 /* matlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180FA11D3E8B2A009AE6D4 /* matlib.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC5F9B621D3E7592003689AA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AC180FA01D3E8B2A009AE6D4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AC180FA11D3E8B2A009AE6D4 /* matlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matlib.cpp; sourceTree = "<group>"; };
+		AC180FA21D3E8B2A009AE6D4 /* matlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matlib.h; sourceTree = "<group>"; };
+		AC180FA31D3E8B2A009AE6D4 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		AC5F9B641D3E7592003689AA /* FMLib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FMLib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C325E07F2DE3E8CF008A275E /* testing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = testing.hpp; path = ../MyLib/MyLib/testing.hpp; sourceTree = SOURCE_ROOT; };
+		C325E0802DE3E8CF008A275E /* testing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = testing.cpp; path = ../MyLib/MyLib/testing.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5F9B611D3E7592003689AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC5F9B5B1D3E7592003689AA = {
+			isa = PBXGroup;
+			children = (
+				AC180FA01D3E8B2A009AE6D4 /* main.cpp */,
+				AC180FA11D3E8B2A009AE6D4 /* matlib.cpp */,
+				AC180FA21D3E8B2A009AE6D4 /* matlib.h */,
+				AC180FA31D3E8B2A009AE6D4 /* stdafx.h */,
+				AC5F9B661D3E7592003689AA /* FMLib */,
+				AC5F9B651D3E7592003689AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5F9B651D3E7592003689AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5F9B641D3E7592003689AA /* FMLib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC5F9B661D3E7592003689AA /* FMLib */ = {
+			isa = PBXGroup;
+			children = (
+				C325E07F2DE3E8CF008A275E /* testing.hpp */,
+				C325E0802DE3E8CF008A275E /* testing.cpp */,
+			);
+			path = FMLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC5F9B631D3E7592003689AA /* FMLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5F9B6B1D3E7592003689AA /* Build configuration list for PBXNativeTarget "FMLib" */;
+			buildPhases = (
+				AC5F9B601D3E7592003689AA /* Sources */,
+				AC5F9B611D3E7592003689AA /* Frameworks */,
+				AC5F9B621D3E7592003689AA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMLib;
+			productName = FMLib;
+			productReference = AC5F9B641D3E7592003689AA /* FMLib */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC5F9B5C1D3E7592003689AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "C++ for financial mathematics";
+				TargetAttributes = {
+					AC5F9B631D3E7592003689AA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AC5F9B5F1D3E7592003689AA /* Build configuration list for PBXProject "FMLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = AC5F9B5B1D3E7592003689AA;
+			productRefGroup = AC5F9B651D3E7592003689AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5F9B631D3E7592003689AA /* FMLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5F9B601D3E7592003689AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC180FA51D3E8B2A009AE6D4 /* matlib.cpp in Sources */,
+				AC180FA41D3E8B2A009AE6D4 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC5F9B691D3E7592003689AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AC5F9B6A1D3E7592003689AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AC5F9B6C1D3E7592003689AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wno-inconsistent-missing-override",
+					"-Wno-unreachable-code",
+				);
+			};
+			name = Debug;
+		};
+		AC5F9B6D1D3E7592003689AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wno-inconsistent-missing-override",
+					"-Wno-unreachable-code",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5F9B5F1D3E7592003689AA /* Build configuration list for PBXProject "FMLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5F9B691D3E7592003689AA /* Debug */,
+				AC5F9B6A1D3E7592003689AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5F9B6B1D3E7592003689AA /* Build configuration list for PBXNativeTarget "FMLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5F9B6C1D3E7592003689AA /* Debug */,
+				AC5F9B6D1D3E7592003689AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC5F9B5C1D3E7592003689AA /* Project object */;
+}
