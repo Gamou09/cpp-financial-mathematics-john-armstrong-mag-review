@@ -10,7 +10,10 @@
 
 #pragma once
 
-#include "stdafx.h"
+#include "CallOption.hpp"
+#include "PutOption.hpp"
+#include "PathIndependentOption.hpp"
+#include "BlackScholesModel.hpp"
 
 class MonteCarloPricer {
     

@@ -7,27 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C356BB5E304CA81200850E27 /* PutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5A304CA81200850E27 /* PutOption.cpp */; };
-		C356BB5F304CA81200850E27 /* CallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4C304CA81200850E27 /* CallOption.cpp */; };
-		C356BB60304CA81200850E27 /* testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5B304CA81200850E27 /* testing.cpp */; };
-		C356BB61304CA81200850E27 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB55304CA81200850E27 /* main.cpp */; };
-		C356BB62304CA81200850E27 /* chap_7_solutions_to_exercises.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */; };
-		C356BB63304CA81200850E27 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB53304CA81200850E27 /* geometry.cpp */; };
-		C356BB64304CA81200850E27 /* charts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB51304CA81200850E27 /* charts.cpp */; };
-		C356BB65304CA81200850E27 /* chap_7_classes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4E304CA81200850E27 /* chap_7_classes.cpp */; };
-		C356BB66304CA81200850E27 /* matlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB56304CA81200850E27 /* matlib.cpp */; };
-		C356BB67304CA81200850E27 /* LineChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB54304CA81200850E27 /* LineChart.cpp */; };
-		C356BB68304CA81200850E27 /* MonteCarloPricer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */; };
-		C356BB69304CA81200850E27 /* Polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB59304CA81200850E27 /* Polynomial.cpp */; };
-		C356BB6A304CA81200850E27 /* PieChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB58304CA81200850E27 /* PieChart.cpp */; };
-		C356BB6B304CA81200850E27 /* BlackScholesModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */; };
-		C356BB6C304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */; };
-		C356BB6D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */; };
-		C356BB6E304CA81200850E27 /* derivatives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB52304CA81200850E27 /* derivatives.cpp */; };
+		C356BBF5304CF2FF00850E27 /* libMyLIbStaticTrue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */; };
+		C356BBF6304CF31200850E27 /* libMyLIbStaticTrue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */; };
+		C356BBF9304D7A7400850E27 /* BlackScholesModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */; };
+		C356BBFA304D7A7400850E27 /* CallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4C304CA81200850E27 /* CallOption.cpp */; };
+		C356BBFB304D7A7400850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */; };
+		C356BBFC304D7A7400850E27 /* chap_7_classes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4E304CA81200850E27 /* chap_7_classes.cpp */; };
+		C356BBFD304D7A7400850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */; };
+		C356BBFE304D7A7400850E27 /* chap_7_solutions_to_exercises.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */; };
+		C356BBFF304D7A7400850E27 /* charts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB51304CA81200850E27 /* charts.cpp */; };
+		C356BC00304D7A7400850E27 /* derivatives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB52304CA81200850E27 /* derivatives.cpp */; };
+		C356BC01304D7A7400850E27 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB53304CA81200850E27 /* geometry.cpp */; };
+		C356BC02304D7A7400850E27 /* LineChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB54304CA81200850E27 /* LineChart.cpp */; };
+		C356BC03304D7A7400850E27 /* matlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB56304CA81200850E27 /* matlib.cpp */; };
+		C356BC04304D7A7400850E27 /* MonteCarloPricer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */; };
+		C356BC05304D7A7400850E27 /* PieChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB58304CA81200850E27 /* PieChart.cpp */; };
+		C356BC06304D7A7400850E27 /* Polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB59304CA81200850E27 /* Polynomial.cpp */; };
+		C356BC07304D7A7400850E27 /* PutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5A304CA81200850E27 /* PutOption.cpp */; };
+		C356BC08304D7A7400850E27 /* testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5B304CA81200850E27 /* testing.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C356BBF3304CF2F600850E27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C325E0472DDE62AB008A275E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C356BBE6304CF2C500850E27;
+			remoteInfo = MyLIbStaticTrue;
+		};
+		C356BBF7304CF31200850E27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C325E0472DDE62AB008A275E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C356BBE6304CF2C500850E27;
+			remoteInfo = MyLIbStaticTrue;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		C325E04D2DDE62AB008A275E /* CopyFiles */ = {
+		C356BBAC304CE88A00850E27 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C356BBB7304CEB2F00850E27 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -39,7 +66,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C325E04F2DDE62AB008A275E /* MyLib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyLib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlackScholesModel.cpp; sourceTree = "<group>"; };
 		C356BB4C304CA81200850E27 /* CallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CallOption.cpp; sourceTree = "<group>"; };
 		C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chap_7_class_piechart_worldweb.cpp; sourceTree = "<group>"; };
@@ -50,7 +76,6 @@
 		C356BB52304CA81200850E27 /* derivatives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = derivatives.cpp; sourceTree = "<group>"; };
 		C356BB53304CA81200850E27 /* geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
 		C356BB54304CA81200850E27 /* LineChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LineChart.cpp; sourceTree = "<group>"; };
-		C356BB55304CA81200850E27 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C356BB56304CA81200850E27 /* matlib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matlib.cpp; sourceTree = "<group>"; };
 		C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MonteCarloPricer.cpp; sourceTree = "<group>"; };
 		C356BB58304CA81200850E27 /* PieChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PieChart.cpp; sourceTree = "<group>"; };
@@ -77,6 +102,9 @@
 		C356BB80304CA87E00850E27 /* testing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = testing.hpp; sourceTree = "<group>"; };
 		C356BB82304CA87E00850E27 /* MyLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MyLib.xcodeproj; sourceTree = "<group>"; };
 		C356BB83304CA87E00850E27 /* histogram_visualization_Simulated_S.ipynb */ = {isa = PBXFileReference; lastKnownFileType = text; path = histogram_visualization_Simulated_S.ipynb; sourceTree = "<group>"; };
+		C356BBAE304CE88A00850E27 /* MyTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		C356BBB9304CEB2F00850E27 /* MyApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyLIbStaticTrue.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,10 +113,41 @@
 			path = output;
 			sourceTree = "<group>";
 		};
+		C356BBAF304CE88A00850E27 /* MyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyTests;
+			sourceTree = "<group>";
+		};
+		C356BBBA304CEB2F00850E27 /* MyApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyApp;
+			sourceTree = "<group>";
+		};
+		C356BBE8304CF2C500850E27 /* MyLIbStaticTrue */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyLIbStaticTrue;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C325E04C2DDE62AB008A275E /* Frameworks */ = {
+		C356BBAB304CE88A00850E27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C356BBF6304CF31200850E27 /* libMyLIbStaticTrue.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C356BBB6304CEB2F00850E27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C356BBF5304CF2FF00850E27 /* libMyLIbStaticTrue.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C356BBE5304CF2C500850E27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,20 +161,25 @@
 			isa = PBXGroup;
 			children = (
 				C325E0972DE88FC1008A275E /* output */,
+				C356BBAF304CE88A00850E27 /* MyTests */,
+				C356BBBA304CEB2F00850E27 /* MyApp */,
+				C356BBE8304CF2C500850E27 /* MyLIbStaticTrue */,
 				C325E0502DDE62AB008A275E /* Products */,
 				C356BB5C304CA81200850E27 /* src */,
-				C356BB5D304CA81200850E27 /* tests */,
 				C356BB81304CA87E00850E27 /* include */,
 				C356BB82304CA87E00850E27 /* MyLib.xcodeproj */,
 				C356BB84304CA87E00850E27 /* notebooks */,
 				C356BB85304CA87E00850E27 /* notes */,
+				C356BBE1304CF17C00850E27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		C325E0502DDE62AB008A275E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C325E04F2DDE62AB008A275E /* MyLib */,
+				C356BBAE304CE88A00850E27 /* MyTests */,
+				C356BBB9304CEB2F00850E27 /* MyApp */,
+				C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +197,6 @@
 				C356BB52304CA81200850E27 /* derivatives.cpp */,
 				C356BB53304CA81200850E27 /* geometry.cpp */,
 				C356BB54304CA81200850E27 /* LineChart.cpp */,
-				C356BB55304CA81200850E27 /* main.cpp */,
 				C356BB56304CA81200850E27 /* matlib.cpp */,
 				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
 				C356BB58304CA81200850E27 /* PieChart.cpp */,
@@ -142,13 +205,6 @@
 				C356BB5B304CA81200850E27 /* testing.cpp */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		C356BB5D304CA81200850E27 /* tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tests;
 			sourceTree = "<group>";
 		};
 		C356BB81304CA87E00850E27 /* include */ = {
@@ -196,30 +252,93 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C356BBE1304CF17C00850E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C356BBE3304CF2C500850E27 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		C325E04E2DDE62AB008A275E /* MyLib */ = {
+		C356BBAD304CE88A00850E27 /* MyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C325E0562DDE62AB008A275E /* Build configuration list for PBXNativeTarget "MyLib" */;
+			buildConfigurationList = C356BBB2304CE88A00850E27 /* Build configuration list for PBXNativeTarget "MyTests" */;
 			buildPhases = (
-				C325E04B2DDE62AB008A275E /* Sources */,
-				C325E04C2DDE62AB008A275E /* Frameworks */,
-				C325E04D2DDE62AB008A275E /* CopyFiles */,
+				C356BBAA304CE88A00850E27 /* Sources */,
+				C356BBAB304CE88A00850E27 /* Frameworks */,
+				C356BBAC304CE88A00850E27 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C356BBF8304CF31200850E27 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C356BBAF304CE88A00850E27 /* MyTests */,
+			);
+			name = MyTests;
+			packageProductDependencies = (
+			);
+			productName = MyTests;
+			productReference = C356BBAE304CE88A00850E27 /* MyTests */;
+			productType = "com.apple.product-type.tool";
+		};
+		C356BBB8304CEB2F00850E27 /* MyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C356BBBD304CEB2F00850E27 /* Build configuration list for PBXNativeTarget "MyApp" */;
+			buildPhases = (
+				C356BBB5304CEB2F00850E27 /* Sources */,
+				C356BBB6304CEB2F00850E27 /* Frameworks */,
+				C356BBB7304CEB2F00850E27 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C356BBF4304CF2F600850E27 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C356BBBA304CEB2F00850E27 /* MyApp */,
+			);
+			name = MyApp;
+			packageProductDependencies = (
+			);
+			productName = MyApp;
+			productReference = C356BBB9304CEB2F00850E27 /* MyApp */;
+			productType = "com.apple.product-type.tool";
+		};
+		C356BBE6304CF2C500850E27 /* MyLIbStaticTrue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C356BBED304CF2C500850E27 /* Build configuration list for PBXNativeTarget "MyLIbStaticTrue" */;
+			buildPhases = (
+				C356BBE3304CF2C500850E27 /* Headers */,
+				C356BBE4304CF2C500850E27 /* Sources */,
+				C356BBE5304CF2C500850E27 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C325E0972DE88FC1008A275E /* output */,
+				C356BBE8304CF2C500850E27 /* MyLIbStaticTrue */,
 			);
-			name = MyLib;
+			name = MyLIbStaticTrue;
 			packageProductDependencies = (
 			);
-			productName = MyLib;
-			productReference = C325E04F2DDE62AB008A275E /* MyLib */;
-			productType = "com.apple.product-type.tool";
+			productName = MyLIbStaticTrue;
+			productReference = C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -230,8 +349,14 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					C325E04E2DDE62AB008A275E = {
-						CreatedOnToolsVersion = 16.3;
+					C356BBAD304CE88A00850E27 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					C356BBB8304CEB2F00850E27 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					C356BBE6304CF2C500850E27 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
@@ -255,37 +380,65 @@
 			);
 			projectRoot = "";
 			targets = (
-				C325E04E2DDE62AB008A275E /* MyLib */,
+				C356BBAD304CE88A00850E27 /* MyTests */,
+				C356BBB8304CEB2F00850E27 /* MyApp */,
+				C356BBE6304CF2C500850E27 /* MyLIbStaticTrue */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C325E04B2DDE62AB008A275E /* Sources */ = {
+		C356BBAA304CE88A00850E27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C356BB5E304CA81200850E27 /* PutOption.cpp in Sources */,
-				C356BB5F304CA81200850E27 /* CallOption.cpp in Sources */,
-				C356BB60304CA81200850E27 /* testing.cpp in Sources */,
-				C356BB61304CA81200850E27 /* main.cpp in Sources */,
-				C356BB62304CA81200850E27 /* chap_7_solutions_to_exercises.cpp in Sources */,
-				C356BB63304CA81200850E27 /* geometry.cpp in Sources */,
-				C356BB64304CA81200850E27 /* charts.cpp in Sources */,
-				C356BB65304CA81200850E27 /* chap_7_classes.cpp in Sources */,
-				C356BB66304CA81200850E27 /* matlib.cpp in Sources */,
-				C356BB67304CA81200850E27 /* LineChart.cpp in Sources */,
-				C356BB68304CA81200850E27 /* MonteCarloPricer.cpp in Sources */,
-				C356BB69304CA81200850E27 /* Polynomial.cpp in Sources */,
-				C356BB6A304CA81200850E27 /* PieChart.cpp in Sources */,
-				C356BB6B304CA81200850E27 /* BlackScholesModel.cpp in Sources */,
-				C356BB6C304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */,
-				C356BB6D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */,
-				C356BB6E304CA81200850E27 /* derivatives.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C356BBB5304CEB2F00850E27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C356BBE4304CF2C500850E27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C356BBF9304D7A7400850E27 /* BlackScholesModel.cpp in Sources */,
+				C356BBFA304D7A7400850E27 /* CallOption.cpp in Sources */,
+				C356BBFB304D7A7400850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */,
+				C356BBFC304D7A7400850E27 /* chap_7_classes.cpp in Sources */,
+				C356BBFD304D7A7400850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */,
+				C356BBFE304D7A7400850E27 /* chap_7_solutions_to_exercises.cpp in Sources */,
+				C356BBFF304D7A7400850E27 /* charts.cpp in Sources */,
+				C356BC00304D7A7400850E27 /* derivatives.cpp in Sources */,
+				C356BC01304D7A7400850E27 /* geometry.cpp in Sources */,
+				C356BC02304D7A7400850E27 /* LineChart.cpp in Sources */,
+				C356BC03304D7A7400850E27 /* matlib.cpp in Sources */,
+				C356BC04304D7A7400850E27 /* MonteCarloPricer.cpp in Sources */,
+				C356BC05304D7A7400850E27 /* PieChart.cpp in Sources */,
+				C356BC06304D7A7400850E27 /* Polynomial.cpp in Sources */,
+				C356BC07304D7A7400850E27 /* PutOption.cpp in Sources */,
+				C356BC08304D7A7400850E27 /* testing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C356BBF4304CF2F600850E27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C356BBE6304CF2C500850E27 /* MyLIbStaticTrue */;
+			targetProxy = C356BBF3304CF2F600850E27 /* PBXContainerItemProxy */;
+		};
+		C356BBF8304CF31200850E27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C356BBE6304CF2C500850E27 /* MyLIbStaticTrue */;
+			targetProxy = C356BBF7304CF31200850E27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C325E0542DDE62AB008A275E /* Debug */ = {
@@ -409,25 +562,61 @@
 			};
 			name = Release;
 		};
-		C325E0572DDE62AB008A275E /* Debug */ = {
+		C356BBB3304CE88A00850E27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C325E0582DDE62AB008A275E /* Release */ = {
+		C356BBB4304CE88A00850E27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/include";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C356BBBE304CEB2F00850E27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C356BBBF304CEB2F00850E27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C356BBEE304CF2C500850E27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C356BBEF304CF2C500850E27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -443,11 +632,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C325E0562DDE62AB008A275E /* Build configuration list for PBXNativeTarget "MyLib" */ = {
+		C356BBB2304CE88A00850E27 /* Build configuration list for PBXNativeTarget "MyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C325E0572DDE62AB008A275E /* Debug */,
-				C325E0582DDE62AB008A275E /* Release */,
+				C356BBB3304CE88A00850E27 /* Debug */,
+				C356BBB4304CE88A00850E27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C356BBBD304CEB2F00850E27 /* Build configuration list for PBXNativeTarget "MyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C356BBBE304CEB2F00850E27 /* Debug */,
+				C356BBBF304CEB2F00850E27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C356BBED304CF2C500850E27 /* Build configuration list for PBXNativeTarget "MyLIbStaticTrue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C356BBEE304CF2C500850E27 /* Debug */,
+				C356BBEF304CF2C500850E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

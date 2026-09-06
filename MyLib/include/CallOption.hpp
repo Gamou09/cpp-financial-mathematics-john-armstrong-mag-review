@@ -6,7 +6,12 @@
 #ifndef CallOption_hpp
 #define CallOption_hpp
 
-#include "stdafx.h"
+/**For inheritance, this is important: you cannot merely forward-declare PathIndependentOption.
+ The compiler needs the complete definition of the base class before defining CallOption.
+ Thus we need to include it specifically or with stdafx.h**/
+#include "PathIndependentOption.hpp"
+
+class BlackScholesModel ;
 
 // Significant benefit opf seperating the the Model to the Options
 // the option is the contract and doesn't change when market changed even though its price may vary
@@ -24,7 +29,7 @@ public:
     double maturity ;
     
     // member function aka method
-    double price ( const BlackScholesModel& bsm) const ;
+    double price (const BlackScholesModel& bsm) const ;
     
     // function overriden from the interface
     double payoff ( double stockAtMaturity) const override;

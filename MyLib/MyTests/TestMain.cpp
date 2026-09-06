@@ -1,26 +1,28 @@
 //
-//  main.cpp
-//  MyLib
+//  Testmain.cpp
+//  MyTests
 //
-//  Created by Martial Aguessi on 21/05/2025.
+//  Created by Martial Aguessi on 06/09/2026.
 //
 
-// Angle bracket vs double quote when importing
-// Anlge brackets tell the compiler that this file won't have changed since last compilation
-// thus no need to compile again thefere compiler runs faster
-//#include <iostream>
-
-// one by one addition of header files
-//#include "matlib.h"
-//#include "geometry.hpp" // same as h file but h for c++
-
-// simplified addition of header file using the windows convention
-// this header file remove redundant typing of include header and library
+#include <iostream>
 #include "stdafx.h"
+#include "TestFunctions.h"
 
-using namespace std ;
+using namespace std;
 
-int main() {
+int main()
+{
+    std::cout << "Hello, World!\n";
+    std::cout << "Welcome to my Test - where I prove what I built works\n\n";
+    
+    std::cout << "Running the tests with the new framework..." << std::endl;
+    
+    testCallOption(); 
+    
+    std::cout << "\n\n" << std::endl;
+    
+    std::cout << "Running the tests with the old framework..." << std::endl;
     
     // Test matLib
     testMatlib();
@@ -56,7 +58,7 @@ int main() {
     useCartesianClass() ;
     
     // Test chap 8
-    testCallOption() ; 
+    testCallOption() ;
     
     // test Pie chart with class
     testPieChart() ;
@@ -98,4 +100,6 @@ int main() {
     // Manual draft
     vector<double> vec ({0.0}) ;
     cout << vec.size() << "\n" ;
+    
+    return 0;
 }

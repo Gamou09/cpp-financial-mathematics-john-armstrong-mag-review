@@ -1,0 +1,54 @@
+//
+//  testCallOption.cpp
+//  MyTests
+//
+//  Created by Martial Aguessi on 06/09/2026.
+//
+
+#include <stdio.h>
+#include <cassert>
+#include <iostream>
+// testing framework
+#include "testing.hpp"
+
+#include "CallOption.hpp"
+
+static void testCallOptionPayoff(){
+    
+    CallOption callOption;
+    callOption.strike = 105.0 ;
+    
+    // OTM
+    double stockAtMaturity = 100 ;
+    double payoff = callOption.payoff(stockAtMaturity) ;
+    ASSERT_APPROX_EQUAL(payoff, 0, 1e-2) ;
+    
+    // ITM
+    double stockAtMaturity2 = 110 ;
+    double payoff2 = callOption.payoff(stockAtMaturity2) ;
+    ASSERT_APPROX_EQUAL(payoff2, 5, 1e-2) ;
+}
+
+static void testCallOptionprice(){
+    
+    CallOption callOption;
+    callOption.strike = 105.0 ;
+    callOption.maturity = 2.0 ;
+    
+    BlackScholesModel bsm ;
+    bsm.date = 1.0 ;
+    bsm.volatility = 0.1 ;
+    bsm.riskFreeRate = 0.05 ;
+    bsm.stockPrice = 100 ;
+    
+    double price = callOption.price(bsm) ;
+    ASSERT_APPROX_EQUAL(price, 4.046, 1e-2) ;
+}
+
+void testCallOption(){
+    TEST( testCallOptionPayoff) ;
+    //    switch on the DEBUG_PRINT statements
+    setDebugEnabled(true) ;
+    TEST( testCallOptionprice) ;
+    setDebugEnabled(false) ;
+}
