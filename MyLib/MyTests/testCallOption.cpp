@@ -5,13 +5,10 @@
 //  Created by Martial Aguessi on 06/09/2026.
 //
 
-#include <stdio.h>
-#include <cassert>
-#include <iostream>
-// testing framework
-#include "testing.hpp"
 
+#include "testing.hpp"
 #include "CallOption.hpp"
+#include "BlackScholesModel.hpp"
 
 static void testCallOptionPayoff(){
     
@@ -44,7 +41,7 @@ static void testCallOptionprice(){
     double price = callOption.price(bsm) ;
     ASSERT_APPROX_EQUAL(price, 4.046, 1e-2) ;
 }
-
+// Test chap 8.6.1 - Call Option class
 void testCallOption(){
     TEST( testCallOptionPayoff) ;
     //    switch on the DEBUG_PRINT statements

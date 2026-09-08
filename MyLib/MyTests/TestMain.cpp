@@ -16,13 +16,24 @@ int main()
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
     
-    std::cout << "Running the tests with the new framework..." << std::endl;
+    std::cout << "Running the tests with the new framework...\n" << std::endl;
     
-    testCallOption(); 
+    // Test BlackScholesModel class
+    testBlackScholesModel() ;
+    
+    // Test chap 8
+    testCallOption() ;
+    
+    // Test chap 8.6.1 - PutOption class
+    testPutOption() ;
+    
+    
+    // Test chap 10 - test MonteCarloPricer with interface
+    testMonteCarloPricer() ;
     
     std::cout << "\n\n" << std::endl;
     
-    std::cout << "Running the tests with the old framework..." << std::endl;
+    std::cout << "Running the tests with the old framework...\n" << std::endl;
     
     // Test matLib
     testMatlib();
@@ -57,14 +68,10 @@ int main()
     // Test use of class Cartesial
     useCartesianClass() ;
     
-    // Test chap 8
-    testCallOption() ;
     
     // test Pie chart with class
     testPieChart() ;
-    
-    // Test chap 8.6.1 - PutOption class
-    testPutOption() ;
+
     
     // Test chap 8.6.2 - LineChart class
     testLineChart() ;
@@ -90,12 +97,6 @@ int main()
     
     // Testing PolynomialClass
     testPolynomialClass() ;
-    
-    // Test BlackScholesModel class
-    testBlackScholesModel() ;
-    
-    // Test of the Monte Carlo Pricer
-    testMonteCarloPricer() ;
     
     // Manual draft
     vector<double> vec ({0.0}) ;

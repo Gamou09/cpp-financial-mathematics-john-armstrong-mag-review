@@ -60,25 +60,14 @@
 
 #include <algorithm> // std::sort ()
 
-// from Chapter 10 - Interface but need to be include before any class implementing that interface since Compiler reads linearly
-#include "PathIndependentOption.hpp"
 
-
-// chap 8
-#include "BlackScholesModel.hpp"
-
-#include "CallOption.hpp"
 
 #include "PieChart.hpp"
-
-#include "PutOption.hpp"
 
 #include "LineChart.hpp"
 
 #include "Polynomial.hpp"
 
-// chap 9
-#include "MonteCarloPricer.hpp"
 
 
 #endif /* stdafx_h */

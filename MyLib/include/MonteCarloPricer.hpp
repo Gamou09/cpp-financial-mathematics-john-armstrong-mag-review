@@ -10,10 +10,15 @@
 
 #pragma once
 
-#include "CallOption.hpp"
-#include "PutOption.hpp"
-#include "PathIndependentOption.hpp"
-#include "BlackScholesModel.hpp"
+// we only need forward declaratiion here since the object are passed by reference "...&"
+// #include "PathIndependentOption.hpp"
+// #include "BlackScholesModel.hpp"
+// #include "CallOption.hpp"
+// #include "PutOption.hpp"
+class CallOption ;
+class PutOption ;
+class PathIndependentOption ;
+class BlackScholesModel ;
 
 class MonteCarloPricer {
     
@@ -38,10 +43,6 @@ public:
     double price (const PathIndependentOption& option,
                                    const BlackScholesModel& bsm) ;
     
-
-    
 };
-
-void testMonteCarloPricer() ;
 
 // #endif /* MonteCarloPricer_hpp */

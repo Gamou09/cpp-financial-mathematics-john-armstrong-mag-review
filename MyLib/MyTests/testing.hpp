@@ -15,7 +15,12 @@
 #ifndef testing_hpp
 #define testing_hpp
 
-#include "stdafx.h"
+// #include "stdafx.h"
+#include <cmath>        // std::fabs
+#include <cstdlib>      // std::exit
+#include <iostream>     // std::cerr
+#include <sstream>      // std::stringstream
+#include <stdexcept>    // std::runtime_error
 
 /*  Is debugging currently enabled */
 bool isDebugEnabled();

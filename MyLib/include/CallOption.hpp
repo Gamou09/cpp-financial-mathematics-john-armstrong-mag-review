@@ -36,6 +36,4 @@ public:
     double getMaturity() const override;
 } ;
 
-void testCallOption() ;
-
 #endif /* CallOption_hpp */

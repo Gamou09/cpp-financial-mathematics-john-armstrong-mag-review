@@ -8,7 +8,9 @@
 #ifndef PutOption_hpp
 #define PutOption_hpp
 
-#include "stdafx.h"
+#include "PathIndependentOption.hpp"
+
+class BlackScholesModel ; 
 
 // Significant benefit opf seperating the the Model to the Options
 // the option is the contract and doesn't change when market changed even though its price may vary
@@ -36,7 +38,5 @@ public:
     double getStrike () const ;
     double getMaturity () const ;
 } ;
-
-void testPutOption() ;
 
 #endif /* PutOption_hpp */

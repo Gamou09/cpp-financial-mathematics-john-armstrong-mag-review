@@ -8,6 +8,16 @@
 #ifndef TestFunctions_h
 #define TestFunctions_h
 
+// Test chap 8
 void testCallOption() ;
+
+// Test chap 8.6.1 - PutOption class
+void testPutOption() ;
+
+// test blackscholes
+void testBlackScholesModel() ; 
+
+// Test chap 10 - test MonteCarloPricer with interface
+void testMonteCarloPricer() ;
 
 #endif /* TestFunctions_h */

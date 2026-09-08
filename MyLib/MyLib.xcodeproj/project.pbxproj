@@ -99,7 +99,6 @@
 		C356BB7D304CA87E00850E27 /* Polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Polynomial.hpp; sourceTree = "<group>"; };
 		C356BB7E304CA87E00850E27 /* PutOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PutOption.hpp; sourceTree = "<group>"; };
 		C356BB7F304CA87E00850E27 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		C356BB80304CA87E00850E27 /* testing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = testing.hpp; sourceTree = "<group>"; };
 		C356BB82304CA87E00850E27 /* MyLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MyLib.xcodeproj; sourceTree = "<group>"; };
 		C356BB83304CA87E00850E27 /* histogram_visualization_Simulated_S.ipynb */ = {isa = PBXFileReference; lastKnownFileType = text; path = histogram_visualization_Simulated_S.ipynb; sourceTree = "<group>"; };
 		C356BBAE304CE88A00850E27 /* MyTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyTests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,9 +199,9 @@
 				C356BB56304CA81200850E27 /* matlib.cpp */,
 				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
 				C356BB58304CA81200850E27 /* PieChart.cpp */,
+				C356BB5B304CA81200850E27 /* testing.cpp */,
 				C356BB59304CA81200850E27 /* Polynomial.cpp */,
 				C356BB5A304CA81200850E27 /* PutOption.cpp */,
-				C356BB5B304CA81200850E27 /* testing.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -227,7 +226,6 @@
 				C356BB7D304CA87E00850E27 /* Polynomial.hpp */,
 				C356BB7E304CA87E00850E27 /* PutOption.hpp */,
 				C356BB7F304CA87E00850E27 /* stdafx.h */,
-				C356BB80304CA87E00850E27 /* testing.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";

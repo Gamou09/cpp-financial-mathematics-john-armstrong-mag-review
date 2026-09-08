@@ -5,7 +5,10 @@
 //  Created by Martial Aguessi on 26/06/2025.
 //
 
-#include "stdafx.h"
+// we will be specific and prefer to add the proper header file
+// #include "stdafx.h"
+#include "PutOption.hpp"
+#include "BlackScholesModel.hpp"
 
 // defintion of constructors
 PutOption::PutOption(): strike(0.0), maturity(0.0){};
@@ -27,22 +30,8 @@ void PutOption::setStrike(double inputStrike){
     strike = inputStrike ;
 }
 
-static void testPutOptionSetStrike(){
-    
-    PutOption putOption ;
-    putOption.setStrike(105.0) ;
-    ASSERT(putOption.getStrike() == 105.0) ;
-}
-
 void PutOption::setMaturity(double inputMaturity){
     maturity = inputMaturity ;
-}
-
-static void testPutOptionSetMaturity(){
-    
-    PutOption putOption ;
-    putOption.setMaturity(2.0) ;
-    ASSERT(putOption.getMaturity() == 2.0) ;
 }
 
 // Implementation of PutOption class methods
@@ -51,22 +40,6 @@ double PutOption::payoff( double stockAtMaturity) const {
     // we don't nee to pass strike as a arg of the method payoff since it's already a member variable of the class PutOption
     if (stockAtMaturity < strike) return strike - stockAtMaturity ;
     else return 0.0 ;
-}
-
-static void testPutOptionPayoff(){
-    
-    PutOption putOption;
-    putOption.setStrike(105.0) ;
-    
-    // ITM
-    double stockAtMaturity = 100 ;
-    double payoff = putOption.payoff(stockAtMaturity) ;
-    ASSERT_APPROX_EQUAL(payoff, 5, 1e-2) ;
-    
-    // OTM
-    double stockAtMaturity2 = 110 ;
-    double payoff2 = putOption.payoff(stockAtMaturity2) ;
-    ASSERT_APPROX_EQUAL(payoff2, 0, 1e-2) ;
 }
 
 double PutOption::price( const BlackScholesModel& bsm) const {
@@ -85,28 +58,3 @@ double PutOption::price( const BlackScholesModel& bsm) const {
     
     return K*exp(-r*T)*normcdf(-d2) - S*normcdf(-d1);
 }
-
-static void testPutOptionPrice(){
-    
-    PutOption putOption;
-    putOption.setStrike(105.0) ;
-    putOption.setMaturity(2.0) ;
-    
-    BlackScholesModel bsm ;
-    bsm.date = 1.0 ;
-    bsm.volatility = 0.1 ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.stockPrice = 100 ;
-    
-    double price = putOption.price(bsm) ;
-    ASSERT_APPROX_EQUAL(price, 3.9252, 1e-2) ;
-}
-
-
-void testPutOption(){
-    TEST( testPutOptionSetStrike) ;
-    TEST( testPutOptionSetMaturity ) ;
-    TEST( testPutOptionPayoff ) ;
-    TEST( testPutOptionPrice) ;
-}
-
