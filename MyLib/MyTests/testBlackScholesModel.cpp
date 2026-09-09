@@ -12,7 +12,7 @@ using namespace std ;
 
 // test
 
-static void testBlackScholesModelgeneratePricePath(){
+static void testBlackScholesModelGeneratePricePath(){
     
     // bsm model inputs
     BlackScholesModel bsm ;
@@ -97,8 +97,12 @@ static void testBlackScholesSimulateStCSV(){
 
 void testBlackScholesModel(){
     
-    TEST( testBlackScholesModelgeneratePricePath) ;
+    std::cout << "\n.... Start of testBlackScholesModel ....\n" << std::endl;
+    
+    TEST( testBlackScholesModelGeneratePricePath) ;
     TEST( testBlackScholesModelRiskNeutralPricePath ) ;
     TEST( testBlackScholesSimulateStCSV ) ;
+    
+    std::cout << "\n.........................................\n" << std::endl;
     
 }

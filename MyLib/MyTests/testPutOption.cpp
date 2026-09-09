@@ -60,8 +60,13 @@ static void testPutOptionPrice(){
 
 
 void testPutOption(){
+    
+    std::cout << "\n.... Start of testPutOption ....\n" << std::endl;
+    
     TEST( testPutOptionSetStrike) ;
     TEST( testPutOptionSetMaturity ) ;
     TEST( testPutOptionPayoff ) ;
     TEST( testPutOptionPrice) ;
+    
+    std::cout << "\n.........................................\n" << std::endl;
 }

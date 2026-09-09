@@ -10,6 +10,7 @@
 #include "BlackScholesModel.hpp"
 #include "PutOption.hpp"
 #include "matlib.h" // rng("default") to fix the seed
+#include "DigitalCallOption.hpp"
 
 static void testPriceCallOption(){
     
@@ -94,12 +95,41 @@ static void testPutAndCall(){
     
 }
 
+static void testDigitalCallOption(){
+    
+    // Fix random seed
+    rng("default") ;
+    
+    // Definte the Black-Scholes model
+    BlackScholesModel m;
+    m.volatility = 0.1 ;
+    m.riskFreeRate = 0.05 ;
+    m.stockPrice = 100.0 ;
+    m.drift = 0.1 ;
+
+    // Define Digital Call Option
+    DigitalCallOption digitCallOption(100, 2) ;
+    
+    // Out pricer
+    MonteCarloPricer pricer ;
+    double digitCallOptionPrice = pricer.price(digitCallOption, m) ;
+    ASSERT_APPROX_EQUAL(digitCallOptionPrice, digitCallOption.price(m), 1e-2) ;
+}
+
+
 void testMonteCarloPricer() {
+    
+    std::cout << "\n.... Start of testMonteCarloPricer ....\n" << std::endl;
     
     TEST( testPriceCallOption ) ;
     TEST( testPricePutOption ) ;
     TEST( testPutAndCall ) ;
     
+    setDebugEnabled(true) ;
+    TEST( testDigitalCallOption ) ;
+    setDebugEnabled(false) ;
+    
+    std::cout << "\n ......................................... \n" << std::endl;
 }
 
 

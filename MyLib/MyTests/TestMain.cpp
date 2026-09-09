@@ -31,9 +31,14 @@ int main()
     // Test chap 10 - test MonteCarloPricer with interface
     testMonteCarloPricer() ;
     
+    // Exercice 10.6.1 - Digital Call Option
+    testDigitalCallOption() ;
+    
     std::cout << "\n\n" << std::endl;
     
     std::cout << "Running the tests with the old framework...\n" << std::endl;
+    
+    /**
     
     // Test matLib
     testMatlib();
@@ -101,6 +106,8 @@ int main()
     // Manual draft
     vector<double> vec ({0.0}) ;
     cout << vec.size() << "\n" ;
+     
+     */
     
     return 0;
 }

@@ -26,7 +26,7 @@ static void testCallOptionPayoff(){
     ASSERT_APPROX_EQUAL(payoff2, 5, 1e-2) ;
 }
 
-static void testCallOptionprice(){
+static void testCallOptionPrice(){
     
     CallOption callOption;
     callOption.strike = 105.0 ;
@@ -43,9 +43,14 @@ static void testCallOptionprice(){
 }
 // Test chap 8.6.1 - Call Option class
 void testCallOption(){
+    
+    std::cout << "\n.... Start of testCallOption ....\n" << std::endl;
+    
     TEST( testCallOptionPayoff) ;
     //    switch on the DEBUG_PRINT statements
     setDebugEnabled(true) ;
-    TEST( testCallOptionprice) ;
+    TEST( testCallOptionPrice) ;
     setDebugEnabled(false) ;
+    
+    std::cout << "\n.........................................\n" << std::endl;
 }

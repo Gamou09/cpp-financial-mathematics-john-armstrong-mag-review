@@ -20,4 +20,7 @@ void testBlackScholesModel() ;
 // Test chap 10 - test MonteCarloPricer with interface
 void testMonteCarloPricer() ;
 
+// test chap 10.6.1 - Digital call Option
+void testDigitalCallOption() ;
+
 #endif /* TestFunctions_h */
