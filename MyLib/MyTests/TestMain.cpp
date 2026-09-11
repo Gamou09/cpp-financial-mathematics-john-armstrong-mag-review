@@ -33,8 +33,9 @@ int main()
     
     // Exercice 10.6.1 - Digital Call Option
     testDigitalCallOption() ;
+    testDigitalPutOption() ;
     
-    std::cout << "\n\n" << std::endl;
+    std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     
     std::cout << "Running the tests with the old framework...\n" << std::endl;
     

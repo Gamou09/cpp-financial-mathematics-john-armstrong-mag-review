@@ -13,10 +13,8 @@
 
 // below include guard is not a pure C++ command but well understood by most compiler so works fine
 #pragma once // this prevent the same file to be included twice or more
-
-
-#include "stdafx.h"
-
+#include <string>
+#include <vector>
 
 const double PI = 3.141592653589 ;
 
@@ -38,7 +36,7 @@ double normcdf(double x) ;
 double norminv(double x) ;
 
 // helper function
-#include <vector>
+
 std::vector<double> linespace(double start, double end, int nSteps) ;
 
 void rng( const std::string& description ) ;

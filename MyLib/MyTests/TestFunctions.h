@@ -23,4 +23,6 @@ void testMonteCarloPricer() ;
 // test chap 10.6.1 - Digital call Option
 void testDigitalCallOption() ;
 
+void testDigitalPutOption();
+
 #endif /* TestFunctions_h */

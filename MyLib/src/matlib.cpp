@@ -5,17 +5,17 @@
 //  Created by Martial Aguessi on 21/05/2025.
 //
 
-//#include <stdio.h> // default xcode line
-
 // Associated header file
-// don't forgot the use convention to gather all header in a stdafx.h header file
-//#include "matlib.h"
+#include "matlib.h"      // Associated header: declares the public interface implemented here
 
-// include built in library
-//#include <cmath>
+// Project headers
+#include "testing.hpp"   // ASSERT, ASSERT_APPROX_EQUAL, TEST, DEBUG_PRINT, setDebugEnabled
 
-// using the windows convention
-#include "stdafx.h"
+// Standard library headers
+#include <cmath>         // std::log, std::exp, std::sqrt, std::abs
+#include <random>        // std::mt19937 and std::mt19937::default_seed
+#include <stdexcept>     // std::logic_error
+
 
 // using namespace
 using namespace std ; 

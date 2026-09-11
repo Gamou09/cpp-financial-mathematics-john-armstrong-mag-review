@@ -27,6 +27,8 @@
 		C356BC08304D7A7400850E27 /* testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BB5B304CA81200850E27 /* testing.cpp */; };
 		C356BC1C3052079900850E27 /* DigitalCallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC1B3052079900850E27 /* DigitalCallOption.cpp */; };
 		C356BC1D3052079900850E27 /* DigitalCallOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC1A3052079900850E27 /* DigitalCallOption.hpp */; };
+		C356BC243054BEA200850E27 /* DigitalPutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC233054BEA200850E27 /* DigitalPutOption.cpp */; };
+		C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC223054BEA200850E27 /* DigitalPutOption.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		C356BBE7304CF2C500850E27 /* libMyLIbStaticTrue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyLIbStaticTrue.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C356BC1A3052079900850E27 /* DigitalCallOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DigitalCallOption.hpp; sourceTree = "<group>"; };
 		C356BC1B3052079900850E27 /* DigitalCallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalCallOption.cpp; sourceTree = "<group>"; };
+		C356BC223054BEA200850E27 /* DigitalPutOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DigitalPutOption.hpp; sourceTree = "<group>"; };
+		C356BC233054BEA200850E27 /* DigitalPutOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalPutOption.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -200,6 +204,7 @@
 				C356BB52304CA81200850E27 /* derivatives.cpp */,
 				C356BB53304CA81200850E27 /* geometry.cpp */,
 				C356BB54304CA81200850E27 /* LineChart.cpp */,
+				C356BC233054BEA200850E27 /* DigitalPutOption.cpp */,
 				C356BB56304CA81200850E27 /* matlib.cpp */,
 				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
 				C356BB58304CA81200850E27 /* PieChart.cpp */,
@@ -220,6 +225,7 @@
 				C356BB72304CA87E00850E27 /* chap_7_classes.hpp */,
 				C356BB73304CA87E00850E27 /* chap_7_classes_ofstream_strings.hpp */,
 				C356BC1A3052079900850E27 /* DigitalCallOption.hpp */,
+				C356BC223054BEA200850E27 /* DigitalPutOption.hpp */,
 				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
 				C356BB75304CA87E00850E27 /* charts.h */,
 				C356BB76304CA87E00850E27 /* derivatives.hpp */,
@@ -270,6 +276,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */,
 				C356BC1D3052079900850E27 /* DigitalCallOption.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +422,7 @@
 				C356BBFA304D7A7400850E27 /* CallOption.cpp in Sources */,
 				C356BBFB304D7A7400850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */,
 				C356BBFC304D7A7400850E27 /* chap_7_classes.cpp in Sources */,
+				C356BC243054BEA200850E27 /* DigitalPutOption.cpp in Sources */,
 				C356BBFD304D7A7400850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */,
 				C356BC1C3052079900850E27 /* DigitalCallOption.cpp in Sources */,
 				C356BBFE304D7A7400850E27 /* chap_7_solutions_to_exercises.cpp in Sources */,

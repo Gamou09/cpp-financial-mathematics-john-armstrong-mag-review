@@ -7,8 +7,8 @@
 
 #include "DigitalCallOption.hpp"
 #include "BlackScholesModel.hpp"
+#include "matlib.h"
 
-#include <cmath>
 
 // default constructor
 DigitalCallOption::DigitalCallOption() : strike(0.0), maturity(0.0) {}
