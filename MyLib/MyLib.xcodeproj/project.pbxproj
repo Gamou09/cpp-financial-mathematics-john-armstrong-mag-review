@@ -29,6 +29,11 @@
 		C356BC1D3052079900850E27 /* DigitalCallOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC1A3052079900850E27 /* DigitalCallOption.hpp */; };
 		C356BC243054BEA200850E27 /* DigitalPutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC233054BEA200850E27 /* DigitalPutOption.cpp */; };
 		C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC223054BEA200850E27 /* DigitalPutOption.hpp */; };
+		C356BC2D3054CE3400850E27 /* RealFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C356BC2C3054CE3400850E27 /* RealFunction.h */; };
+		C356BC5D3054CFCC00850E27 /* Integral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC5C3054CFCC00850E27 /* Integral.cpp */; };
+		C356BC5E3054CFCC00850E27 /* Integral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5B3054CFCC00850E27 /* Integral.hpp */; };
+		C356BC613054D3B600850E27 /* SinFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC603054D3B600850E27 /* SinFunction.cpp */; };
+		C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5F3054D3B600850E27 /* SinFunction.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,11 @@
 		C356BC1B3052079900850E27 /* DigitalCallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalCallOption.cpp; sourceTree = "<group>"; };
 		C356BC223054BEA200850E27 /* DigitalPutOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DigitalPutOption.hpp; sourceTree = "<group>"; };
 		C356BC233054BEA200850E27 /* DigitalPutOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalPutOption.cpp; sourceTree = "<group>"; };
+		C356BC2C3054CE3400850E27 /* RealFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealFunction.h; sourceTree = "<group>"; };
+		C356BC5B3054CFCC00850E27 /* Integral.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Integral.hpp; sourceTree = "<group>"; };
+		C356BC5C3054CFCC00850E27 /* Integral.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Integral.cpp; sourceTree = "<group>"; };
+		C356BC5F3054D3B600850E27 /* SinFunction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SinFunction.hpp; sourceTree = "<group>"; };
+		C356BC603054D3B600850E27 /* SinFunction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SinFunction.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -204,9 +214,11 @@
 				C356BB52304CA81200850E27 /* derivatives.cpp */,
 				C356BB53304CA81200850E27 /* geometry.cpp */,
 				C356BB54304CA81200850E27 /* LineChart.cpp */,
+				C356BC5C3054CFCC00850E27 /* Integral.cpp */,
 				C356BC233054BEA200850E27 /* DigitalPutOption.cpp */,
 				C356BB56304CA81200850E27 /* matlib.cpp */,
 				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
+				C356BC603054D3B600850E27 /* SinFunction.cpp */,
 				C356BB58304CA81200850E27 /* PieChart.cpp */,
 				C356BC1B3052079900850E27 /* DigitalCallOption.cpp */,
 				C356BB5B304CA81200850E27 /* testing.cpp */,
@@ -225,6 +237,9 @@
 				C356BB72304CA87E00850E27 /* chap_7_classes.hpp */,
 				C356BB73304CA87E00850E27 /* chap_7_classes_ofstream_strings.hpp */,
 				C356BC1A3052079900850E27 /* DigitalCallOption.hpp */,
+				C356BC5F3054D3B600850E27 /* SinFunction.hpp */,
+				C356BC5B3054CFCC00850E27 /* Integral.hpp */,
+				C356BC2C3054CE3400850E27 /* RealFunction.h */,
 				C356BC223054BEA200850E27 /* DigitalPutOption.hpp */,
 				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
 				C356BB75304CA87E00850E27 /* charts.h */,
@@ -278,6 +293,9 @@
 			files = (
 				C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */,
 				C356BC1D3052079900850E27 /* DigitalCallOption.hpp in Headers */,
+				C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */,
+				C356BC2D3054CE3400850E27 /* RealFunction.h in Headers */,
+				C356BC5E3054CFCC00850E27 /* Integral.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,12 +448,14 @@
 				C356BC00304D7A7400850E27 /* derivatives.cpp in Sources */,
 				C356BC01304D7A7400850E27 /* geometry.cpp in Sources */,
 				C356BC02304D7A7400850E27 /* LineChart.cpp in Sources */,
+				C356BC613054D3B600850E27 /* SinFunction.cpp in Sources */,
 				C356BC03304D7A7400850E27 /* matlib.cpp in Sources */,
 				C356BC04304D7A7400850E27 /* MonteCarloPricer.cpp in Sources */,
 				C356BC05304D7A7400850E27 /* PieChart.cpp in Sources */,
 				C356BC06304D7A7400850E27 /* Polynomial.cpp in Sources */,
 				C356BC07304D7A7400850E27 /* PutOption.cpp in Sources */,
 				C356BC08304D7A7400850E27 /* testing.cpp in Sources */,
+				C356BC5D3054CFCC00850E27 /* Integral.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

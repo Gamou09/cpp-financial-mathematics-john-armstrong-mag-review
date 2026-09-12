@@ -25,4 +25,6 @@ void testDigitalCallOption() ;
 
 void testDigitalPutOption();
 
+void testIntegral() ; 
+
 #endif /* TestFunctions_h */
