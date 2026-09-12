@@ -38,6 +38,7 @@ double integralPayOff(double a,
         
     public:
         /* Member variable */
+        // from the function paramter
         const PathIndependentOption& option ;
         
         /* Constructor */

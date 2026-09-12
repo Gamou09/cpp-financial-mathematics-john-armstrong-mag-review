@@ -28,16 +28,20 @@ static void testIntegralSin(){
     
 }
 
+// Using Local class Sin to avoid crreating a new CPP file everytime we want to test a function
 static void testIntegralVersion2(){
-    
+   
+    // Local class which will only exists inside the scope of the testIntegralVersion2
     class Sin: public RealFunction {
         
     public:
+        // since local class, the declaration already include the method definition
         double evaluate (double x) const override {
             return sin(x) ;
         }
     } ;
     
+    // Instantiating the local class
     Sin integrand ;
     double actual = integral(integrand, 1, 3, 1000) ;
     double expected = -cos(3.0) + cos(1.0) ;
