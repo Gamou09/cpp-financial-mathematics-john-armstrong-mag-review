@@ -275,6 +275,139 @@ void testConstructPositionsV2(){
     // delete r[0].instrument ; // No longer needed since we are using share_ptr; Error: Cannot delete expression of type share_ptr<>
 }
 
+class PositionV3 {
+    
+public:
+    string trader ;
+    double quantity ;
+    Instrument& instrument ; // Passing the data by reference
+    explicit PositionV3 (Instrument& instrument) ;
+} ;
+
+PositionV3:: PositionV3 (Instrument& instrument) : instrument( instrument ) {}
+
+PositionV3 constructPositionsV3(){
+    // This function doesn't work
+    // the instrument is deleted, so all the returned positions contain broker references
+    vector<PositionV3> positions ;
+    
+    Instrument instrument  ; // created on this function's stack
+    instrument.companyName = "Google" ;
+    instrument.bloombergTicker = "GOOG US Equity" ;
+    instrument.ricCode = "GOOG.OQ" ;
+    
+    PositionV3 position(instrument) ; // position.instrument refers to ↑
+    position.trader = "Han" ;
+    position.quantity = 100.00 ;
+    
+    return position ;
+} // <-- instrument is destroyed HERE
+
+void testConstructPositionsV3(){
+    
+
+    PositionV3 p = constructPositionsV3() ;
+    
+    cout << "Trader " << p.trader << "\n" ;
+    cout << "Quantity " << p.quantity << "\n" ;
+
+    cout << "Instrument: ";
+    cout << p.instrument.companyName;   // Undefined behaviour: dangling reference
+    cout << "\n";
+    
+}
+
+class RealFunction {
+    
+public:
+    /* A vitual destructor */
+    virtual ~RealFunction() {} ;
+    
+    /* This method is abstract there is no definition*/
+    virtual double evaluate (double x) const = 0 ;
+    
+} ;
+
+double integral (const RealFunction& f,
+                 double a,
+                 double b,
+                 int nPoints){
+    
+    // intermediate variable initialization
+    double h = (b - a) / nPoints ;
+    double x = a + 0.5*h ;
+    
+    // computatioin using rectangle method
+    double total =  0.0 ;
+    for (int i = 0; i < nPoints; ++i) {
+        double y = f.evaluate(x) ;
+        total += y ;
+        x += h ;
+    }
+    
+    return h*total ;
+    
+}
+
+// Example of good use of Sharing data by reference
+double integralToInfinity(RealFunction& f, double lowerLimit, int nPoints){
+    
+    class DefinitionIntegrand: public RealFunction {
+        
+    public:
+        const RealFunction& g;
+        double lowerLimit ;
+        
+        DefinitionIntegrand(RealFunction& g, double lowerLimit):  g(g), lowerLimit(lowerLimit){}
+        
+        double evaluate(double x) const override {
+            return (1/(x*x)) * g.evaluate(lowerLimit - 1 + (1/x));
+        }
+    } ;
+    
+    DefinitionIntegrand integrand(f, lowerLimit) ;
+    // n modern C++, std::integral is also a name from the standard library.
+    // ::integral explicitly means: use my integral function from the global namespace.
+    return ::integral(integrand, 0, 1, nPoints) ;
+}
+
+class ExpMinusX : public RealFunction {
+public:
+    double evaluate(double x) const override {
+        return exp(-x);
+    }
+};
+
+//
+// 11.8.1 - Factorial exampel to prove different memory part usqge
+//
+
+int factorial (int n){
+    
+    int ret = 1 ;
+    for (int i = 0; i < n; i++) {
+        ret *= (i+1) ;
+    }
+    
+    return ret ;
+    
+}
+
+void testFactorial(){
+    
+    cout << "\nCalling the testFactorial() function ......\n" ;
+    
+    int n = 3 ;
+    int nFactorial = factorial(n) ;
+    
+    cout << n << "!= " << factorial(n) ;
+    
+    assert(nFactorial == 6) ;
+    
+    cout << "\nNote: If you see this, it means that the assert criteria passed\n" ;
+    
+}
+
 //
 // Main function
 //
@@ -817,111 +950,206 @@ int main(int argc, const char * argv[]) {
     
     cout << "\nChap 11.6: Using pointers to share data ...........................\n" ;
     
-    cout <<"\nNote: \n" ;
-    cout <<" - Similar to work with array and pointers, we can use new keyword to create a long term storage for data \n";
-    cout <<" - Also this long-term storage will need to be delete manually with key word delete\n" ;
-    cout <<" - Subtle difference between new[] vs new, delete[] vs delete\n" ;
+//    cout <<"\nNote: \n" ;
+//    cout <<" - Similar to work with array and pointers, we can use new keyword to create a long term storage for data \n";
+//    cout <<" - Also this long-term storage will need to be delete manually with key word delete\n" ;
+//    cout <<" - Subtle difference between new[] vs new, delete[] vs delete\n" ;
+//    
+//    cout << "\n11.6.a - Example of usage of new and delete\n" ;
+//    Pair* myPair2 = new Pair ;
+//    myPair2->x = 1.3 ;
+//    myPair2->y = 2.5 ;
+//    
+//    cout << "Pair (" ;
+//    cout << (myPair2->x);
+//    cout << ", " ;
+//    cout << (myPair2->y);
+//    cout << ")\n" ;
+//
+//    delete myPair2 ;
+//    
+//    cout << "\n11.6.b - Testing the concept of Using pointer to share data with class Positions and Instruments\n" ;
+//    
+//    cout << "\nCalling testConstructPositions to test: Position, Instrument and constructPositions()\n" ;
+//    testConstructPositions() ;
+//    
+//    cout << "\n11.6.c - Danger: Always initialise pointers and check for nullptr\n";
+//
+//    cout << "\nTest 1: Valid pointer\n";
+//
+//    // constructPositions() creates Position objects whose instrument pointers
+//    // point to real Instrument objects.
+//    vector<Position> ptf = constructPositions();
+//
+//    cout << "The company name for position is "
+//         << getCompanyName(ptf[0]) << "\n";
+//
+//
+//    cout << "\nTest 2: nullptr guardrail\n";
+//
+//    // Initialise the pointer explicitly to nullptr.
+//    // This means the pointer deliberately points to no Instrument.
+//    Instrument* instrument = nullptr;
+//
+//    Position p(instrument);
+//
+//    // getCompanyName() checks for nullptr before dereferencing the pointer,
+//    // so this call is safe and should return "Name not set".
+//    cout << "The company name for position is "
+//         << getCompanyName(p) << "\n";
+//
+//
+//    /*
+//     IMPORTANT:
+//
+//     Instrument* instrument;            // BAD: uninitialised pointer
+//     Instrument* instrument = nullptr;  // SAFE: explicitly points nowhere
+//
+//     An uninitialised pointer contains an indeterminate address.
+//     It may therefore NOT compare equal to nullptr.
+//
+//     In that case, a check such as:
+//
+//         if (position.instrument == nullptr)
+//
+//     would not necessarily protect us, and dereferencing the garbage address
+//     could cause EXC_BAD_ACCESS.
+//
+//     Therefore:
+//         1. Always initialise pointers.
+//         2. Use nullptr when the pointer intentionally points to nothing.
+//         3. Check for nullptr before dereferencing when nullptr is possible (if not nasty error also).
+//    */
+//    
+//    cout << "\n11.6.1 - Sharing with shared_ptr\n";
+//
+//    cout <<"Note: \n" ;
+//    cout <<" - shared_ptr (an example of smart pointer) solves the delete problem. \n" ;
+//    cout <<" - shared_ptr keep track of how often it has been copied\n" ;
+//    cout <<" - Once the number of copies of shared_ptr in existence drops to zero, the data pointed to will be deleted \n";
+//    cout <<" - To use shared_ptr, you need to #include <memory>\n" ;
+//    cout <<" - Do shared_ptr<Instrument> rather than Instrument* instrument \n" ;
+//    
+//    cout << "\nCalling testConstructPositionsV2 to test: PositionV2, Instrument and constructPositionsV2()\n" ;
+//    testConstructPositionsV2() ;
+//    
+//    cout << "\nFinal note:\n";
+//    cout << "- std::shared_ptr works well for many practical cases where ownership is shared.\n";
+//    cout << "- Main danger: circular references can keep the reference count above 0,\n";
+//    cout << "  so the objects are never deleted -> memory leak.\n";
+//    cout << "- Solution: break ownership cycles with std::weak_ptr,\n";
+//    cout << "  or design the relationships so that circular ownership does not occur.\n";
+//    
+//    cout << "\nCircular reference solutions:\n";
+//    cout << "- Solution 1: use std::weak_ptr for references that should not own the object.\n";
+//    cout << "- Solution 2: redesign ownership so only one direction owns the object,\n";
+//    cout << "  while the reverse relationship is only a non-owning reference.\n";
+//    cout << "- The key question is: who actually owns the lifetime of the object?\n";
+//    
+//    /*
+//     shared_ptr = "I share ownership of this object."
+//
+//     weak_ptr = "I know about this object, but I do not keep it alive."
+//
+//     raw pointer/reference = "I can access this object, but someone else owns it."
+//    
+//     */
+
+    cout << "\nChap 11.7: Sharing data with references ...........................\n" ;
     
-    cout << "\n11.6.a - Example of usage of new and delete\n" ;
-    Pair* myPair2 = new Pair ;
-    myPair2->x = 1.3 ;
-    myPair2->y = 2.5 ;
+//    cout <<"\nNotes: \n";
+//    cout <<" -A lot of what you can do with pointers, you can do with a reference. \n";
+//    cout <<" -One advantage: By reference requires initialisation so no risk of nullptr \n";
+//    cout <<"- One risk is that there is not guarantee that the object being reference won't be delete\n";
+//    
+//    cout <<"\n11.7.a - Test the sharing data by reference with testConstructPositionsV3\n" ;
+//    testConstructPositionsV3() ;
+//    
+//    cout << "\nNotes: \n";
+//    cout << " - The Instrument reference is now dangling because the local Instrument\n";
+//    cout << "   was destroyed when constructPositionsV3() returned.\n";
+//    cout << " - Accessing it below is undefined behaviour.\n";
+//    
+//    cout << "\n11.7.b - Testing integralToInfinity with exp(-x)\n";
+//
+//    ExpMinusX f;
+//
+//    double result = integralToInfinity(f, 0.0, 100000);
+//
+//    cout << "Integral of exp(-x) from 0 to infinity\n";
+//    cout << "Expected result: 1\n";
+//    cout << "Computed result: " << result << "\n";
+//    
+//    cout <<"\nFinal notes: \n";
+//    cout <<" -Think carefully before using reference ,e,ber variables or returning references\n";
+//    cout <<" -You will need to be certain when the reference will be deleted\n";
+//    cout <<" -You should never return a reference to a local variable as that will always be deleted\n";
     
-    cout << "Pair (" ;
-    cout << (myPair2->x);
-    cout << ", " ;
-    cout << (myPair2->y);
-    cout << ")\n" ;
+    cout << "\nChap 11.8: The C++ memory model ...........................\n";
 
-    delete myPair2 ;
-    
-    cout << "\n11.6.b - Testing the concept of Using pointer to share data with class Positions and Instruments\n" ;
-    
-    cout << "\nCalling testConstructPositions to test: Position, Instrument and constructPositions()\n" ;
-    testConstructPositions() ;
-    
-    cout << "\n11.6.c - Danger: Always initialise pointers and check for nullptr\n";
+    cout << "\nYou can think of computer memory as divided into four sections:\n";
 
-    cout << "\nTest 1: Valid pointer\n";
+    cout << " - Memory used by other programs. You are not allowed to access this memory.\n";
+    cout << "   If you try, the OS will usually terminate your program.\n";
+    cout << "   This may appear as a segmentation fault or general protection fault.\n";
 
-    // constructPositions() creates Position objects whose instrument pointers
-    // point to real Instrument objects.
-    vector<Position> ptf = constructPositions();
+    cout << " - Memory containing the executable code for your program.\n";
+    cout << "   This memory is normally readable but not writable.\n";
+    cout << "   Attempting to write to protected code memory can cause the program to crash.\n";
 
-    cout << "The company name for position is "
-         << getCompanyName(ptf[0]) << "\n";
+    cout << " - The stack: a region of memory used mainly for short-term storage during function calls.\n";
+    cout << "   Think of it like a stack of paper on which rough notes are made and then quickly discarded.\n";
+    cout << "   Local variables and function parameters are commonly stored on the stack.\n";
+    cout << "   Stack allocations are typically fixed-size and managed automatically.\n";
 
+    cout << " - The heap: a region of memory used for dynamically allocated data.\n";
+    cout << "   Think of it like a filing cabinet containing records you may need for longer periods.\n";
+    cout << "   Data created using new or new[] is allocated on the heap.\n";
+    cout << "   A memory allocator searches for a suitable unused block of heap memory large enough for the request.\n";
 
-    cout << "\nTest 2: nullptr guardrail\n";
-
-    // Initialise the pointer explicitly to nullptr.
-    // This means the pointer deliberately points to no Instrument.
-    Instrument* instrument = nullptr;
-
-    Position p(instrument);
-
-    // getCompanyName() checks for nullptr before dereferencing the pointer,
-    // so this call is safe and should return "Name not set".
-    cout << "The company name for position is "
-         << getCompanyName(p) << "\n";
+    cout << " - The heap is generally less structured than the stack.\n";
+    cout << "   The stack behaves like a neatly arranged stack of memory frames.\n";
+    cout << "   The heap may contain allocated and free blocks scattered throughout memory.\n";
 
 
-    /*
-     IMPORTANT:
+    cout << "\nChap 11.8.1: The Stack (S like Short-term) using factorial example ...........................\n";
 
-     Instrument* instrument;            // BAD: uninitialised pointer
-     Instrument* instrument = nullptr;  // SAFE: explicitly points nowhere
+    testFactorial();
 
-     An uninitialised pointer contains an indeterminate address.
-     It may therefore NOT compare equal to nullptr.
+    cout << "\nKey C++ differentiator related to speed:\n";
 
-     In that case, a check such as:
+    cout << "   - For each active function call, the stack stores information such as parameters and local variables.\n";
+    cout << "   - It also stores information needed to return to the code that called the function.\n";
+    cout << "   - The computer needs this return information so execution can resume at the correct location.\n";
+    cout << "   - Function calls add stack frames near the top of the stack.\n";
+    cout << "   - Function returns remove those stack frames.\n";
+    cout << "   - This simple push/pop style of memory management is extremely efficient.\n";
 
-         if (position.instrument == nullptr)
 
-     would not necessarily protect us, and dereferencing the garbage address
-     could cause EXC_BAD_ACCESS.
-
-     Therefore:
-         1. Always initialise pointers.
-         2. Use nullptr when the pointer intentionally points to nothing.
-         3. Check for nullptr before dereferencing when nullptr is possible (if not nasty error also).
-    */
-    
-    cout << "\n11.6.1 - Sharing with shared_ptr\n";
-
-    cout <<"Note: \n" ;
-    cout <<" - shared_ptr (an example of smart pointer) solves the delete problem. \n" ;
-    cout <<" - shared_ptr keep track of how often it has been copied\n" ;
-    cout <<" - Once the number of copies of shared_ptr in existence drops to zero, the data pointed to will be deleted \n";
-    cout <<" - To use shared_ptr, you need to #include <memory>\n" ;
-    cout <<" - Do shared_ptr<Instrument> rather than Instrument* instrument \n" ;
-    
-    cout << "\nCalling testConstructPositionsV2 to test: PositionV2, Instrument and constructPositionsV2()\n" ;
-    testConstructPositionsV2() ;
-    
-    cout << "\nFinal note:\n";
-    cout << "- std::shared_ptr works well for many practical cases where ownership is shared.\n";
-    cout << "- Main danger: circular references can keep the reference count above 0,\n";
-    cout << "  so the objects are never deleted -> memory leak.\n";
-    cout << "- Solution: break ownership cycles with std::weak_ptr,\n";
-    cout << "  or design the relationships so that circular ownership does not occur.\n";
-    
-    cout << "\nCircular reference solutions:\n";
-    cout << "- Solution 1: use std::weak_ptr for references that should not own the object.\n";
-    cout << "- Solution 2: redesign ownership so only one direction owns the object,\n";
-    cout << "  while the reverse relationship is only a non-owning reference.\n";
-    cout << "- The key question is: who actually owns the lifetime of the object?\n";
-    
-    /*
-     shared_ptr = "I share ownership of this object."
-
-     weak_ptr = "I know about this object, but I do not keep it alive."
-
-     raw pointer/reference = "I can access this object, but someone else owns it."
-    
-     */
-
+    // Tools such as Parasoft Insure++ can detect memory leaks at runtime
+    // by tracking dynamic memory allocations (new/new[]) and checking
+    // whether the allocated memory is eventually released (delete/delete[]).
+    //
+    // Insure++ usage:
+    //
+    // 1. Build/instrument the C++ program with Insure++.
+    // 2. Run the program normally.
+    // 3. Insure++ monitors memory operations at runtime.
+    // 4. It reports problems such as:
+    //      - new/new[] without matching delete/delete[]
+    //      - delete vs delete[] mismatches
+    //      - access outside array bounds
+    //      - dangling pointers
+    //      - uninitialized memory
+    // 5. Fix the reported line and run the test again.
+    //
+    // TODO LATER:
+    // Install and configure Insure++, then run this Chapter 11 project
+    // through it to see how it detects the memory errors demonstrated here.
+    //
+    // Note: Insure++ is an external development/testing tool.
+    // You do not normally use it by adding #include <...> to your code.
+    // It works by instrumenting/linking with your program during the build process.
     
     return EXIT_SUCCESS;
 }
