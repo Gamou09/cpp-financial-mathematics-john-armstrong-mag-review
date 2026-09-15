@@ -20,6 +20,8 @@ class PutOption ;
 class PathIndependentOption ;
 class BlackScholesModel ;
 
+class PathDependentOption;
+
 class MonteCarloPricer {
     
 public:
@@ -42,6 +44,13 @@ public:
     /* Price a PathIndependentOption */
     double price (const PathIndependentOption& option,
                                    const BlackScholesModel& bsm) ;
+    
+    /*
+     This is the price calculation for PathDependentOption
+     So far UpandOutCallOption
+     */
+    double price(const PathDependentOption& option,
+                 const BlackScholesModel& bsm);
     
 };
 

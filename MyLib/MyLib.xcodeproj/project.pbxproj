@@ -34,6 +34,9 @@
 		C356BC5E3054CFCC00850E27 /* Integral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5B3054CFCC00850E27 /* Integral.hpp */; };
 		C356BC613054D3B600850E27 /* SinFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC603054D3B600850E27 /* SinFunction.cpp */; };
 		C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5F3054D3B600850E27 /* SinFunction.hpp */; };
+		C3FF23C93058BDC4006AC486 /* UpAndOutCallOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */; };
+		C3FF23CA3058BDC4006AC486 /* UpAndOutCallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */; };
+		C3FF23CD3058C089006AC486 /* PathDependentOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF23CC3058C089006AC486 /* PathDependentOption.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		C356BC5C3054CFCC00850E27 /* Integral.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Integral.cpp; sourceTree = "<group>"; };
 		C356BC5F3054D3B600850E27 /* SinFunction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SinFunction.hpp; sourceTree = "<group>"; };
 		C356BC603054D3B600850E27 /* SinFunction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SinFunction.cpp; sourceTree = "<group>"; };
+		C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UpAndOutCallOption.hpp; sourceTree = "<group>"; };
+		C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UpAndOutCallOption.cpp; sourceTree = "<group>"; };
+		C3FF23CC3058C089006AC486 /* PathDependentOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PathDependentOption.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -213,6 +219,7 @@
 				C356BB51304CA81200850E27 /* charts.cpp */,
 				C356BB52304CA81200850E27 /* derivatives.cpp */,
 				C356BB53304CA81200850E27 /* geometry.cpp */,
+				C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */,
 				C356BB54304CA81200850E27 /* LineChart.cpp */,
 				C356BC5C3054CFCC00850E27 /* Integral.cpp */,
 				C356BC233054BEA200850E27 /* DigitalPutOption.cpp */,
@@ -242,6 +249,7 @@
 				C356BC2C3054CE3400850E27 /* RealFunction.h */,
 				C356BC223054BEA200850E27 /* DigitalPutOption.hpp */,
 				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
+				C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */,
 				C356BB75304CA87E00850E27 /* charts.h */,
 				C356BB76304CA87E00850E27 /* derivatives.hpp */,
 				C356BB77304CA87E00850E27 /* geometry.hpp */,
@@ -249,6 +257,7 @@
 				C356BB79304CA87E00850E27 /* matlib.h */,
 				C356BB7A304CA87E00850E27 /* MonteCarloPricer.hpp */,
 				C356BB7B304CA87E00850E27 /* PathIndependentOption.hpp */,
+				C3FF23CC3058C089006AC486 /* PathDependentOption.hpp */,
 				C356BB7C304CA87E00850E27 /* PieChart.hpp */,
 				C356BB7D304CA87E00850E27 /* Polynomial.hpp */,
 				C356BB7E304CA87E00850E27 /* PutOption.hpp */,
@@ -292,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */,
+				C3FF23C93058BDC4006AC486 /* UpAndOutCallOption.hpp in Headers */,
+				C3FF23CD3058C089006AC486 /* PathDependentOption.hpp in Headers */,
 				C356BC1D3052079900850E27 /* DigitalCallOption.hpp in Headers */,
 				C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */,
 				C356BC2D3054CE3400850E27 /* RealFunction.h in Headers */,
@@ -450,6 +461,7 @@
 				C356BC02304D7A7400850E27 /* LineChart.cpp in Sources */,
 				C356BC613054D3B600850E27 /* SinFunction.cpp in Sources */,
 				C356BC03304D7A7400850E27 /* matlib.cpp in Sources */,
+				C3FF23CA3058BDC4006AC486 /* UpAndOutCallOption.cpp in Sources */,
 				C356BC04304D7A7400850E27 /* MonteCarloPricer.cpp in Sources */,
 				C356BC05304D7A7400850E27 /* PieChart.cpp in Sources */,
 				C356BC06304D7A7400850E27 /* Polynomial.cpp in Sources */,

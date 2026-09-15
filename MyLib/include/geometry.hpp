@@ -75,6 +75,7 @@ double perimeterTriangle (const CartesianPoint& p1,
                           const CartesianPoint& p2,
                           const CartesianPoint& p3) ;
 
+// Improving the Class Point with inline method
 // New class with  constructor
 class Point {
     
@@ -87,6 +88,30 @@ public:
     // Think of the a constructor as a function that is automatically called before anyone is allowed to see the object
     // Technically is not a function as only called when the object is being initialised and doesn't have a return value
     Point() ;
+    
+    // inline member functions to get X and Y
+    // that's actually a getter function
+    // No slower than accessing x and y directly
+    double getX() const {
+        return x ;
+    }
+    
+    double getY() const {
+        return y ;
+    }
+    
+    
+    // set member function using keyword this
+    // this always contains a pointer to the current object 
+    void setX(double x){
+        this->x = x ;
+    }
+    
+    void setY(double y){
+        this->y = y ;
+    }
+    
+private:
     
     // member variables
     double x;
