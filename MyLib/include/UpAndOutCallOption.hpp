@@ -29,7 +29,7 @@ private:
     double maturity ;
     
 public:
-    UpAndOutCallOption(double strike, double barrier);
+    UpAndOutCallOption(double strike, double barrier, double maturity);
 
     double payoff(const std::vector<double>& path) const override;
     

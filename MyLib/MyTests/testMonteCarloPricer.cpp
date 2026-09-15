@@ -11,6 +11,7 @@
 #include "PutOption.hpp"
 #include "matlib.h" // rng("default") to fix the seed
 #include "DigitalCallOption.hpp"
+#include "UpAndOutCallOption.hpp"
 
 static void testPriceCallOption(){
     
@@ -117,6 +118,32 @@ static void testDigitalCallOption(){
 }
 
 
+static void testMonteCarloPricerPathDependentOption() {
+
+    BlackScholesModel bsm;
+
+    bsm.date = 0.0;
+    bsm.stockPrice = 100.0;
+    bsm.riskFreeRate = 0.05;
+    bsm.volatility = 0.20;
+
+    UpAndOutCallOption option(
+        100.0,
+        0.0,
+        1.0
+    );
+
+    MonteCarloPricer pricer;
+
+    double actualPrice = pricer.price(option, bsm);
+
+    ASSERT_APPROX_EQUAL(
+        0.0,
+        actualPrice,
+        1e-12
+    );
+}
+
 void testMonteCarloPricer() {
     
     std::cout << "\n.... Start of testMonteCarloPricer ....\n" << std::endl;
@@ -128,6 +155,8 @@ void testMonteCarloPricer() {
     setDebugEnabled(true) ;
     TEST( testDigitalCallOption ) ;
     setDebugEnabled(false) ;
+    
+    TEST( testMonteCarloPricerPathDependentOption ) ;
     
     std::cout << "\n ......................................... \n" << std::endl;
 }

@@ -12,8 +12,8 @@
 #include "MonteCarloPricer.hpp"
 
 // constructor
-UpAndOutCallOption::UpAndOutCallOption(double strike, double barrier)
-    : strike(strike), barrier(barrier) {
+UpAndOutCallOption::UpAndOutCallOption(double strike, double barrier, double maturity)
+    : strike(strike), barrier(barrier), maturity(maturity) {
 }
 
 double UpAndOutCallOption::getMaturity() const {

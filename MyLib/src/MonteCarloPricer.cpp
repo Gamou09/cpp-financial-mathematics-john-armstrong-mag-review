@@ -11,8 +11,7 @@
 #include "BlackScholesModel.hpp"
 #include "CallOption.hpp"
 #include "PutOption.hpp"
-
-using namespace std ;
+#include "PathDependentOption.hpp"
 
 /* define Constructor */
 MonteCarloPricer::MonteCarloPricer() : nScenarios(10000) {};
@@ -23,7 +22,7 @@ double MonteCarloPricer::price (const CallOption& callOption,
     
     double total = 0.0 ;
     for ( int i = 0 ; i < nScenarios ; i++) {
-        vector<double> path = bsm.generateRiskNeutralPricePath(callOption.maturity, 1) ;
+        std::vector<double> path = bsm.generateRiskNeutralPricePath(callOption.maturity, 1) ;
         double stockPrice = path.back() ;
         double payoff = callOption.payoff(stockPrice) ;
         total += payoff ;
@@ -42,7 +41,7 @@ double MonteCarloPricer::price (const PutOption& putOption,
     
     double total = 0.0 ;
     for ( int i = 0 ; i < nScenarios ; i++) {
-        vector<double> path = bsm.generateRiskNeutralPricePath(putOption.getMaturity(), 1) ;
+        std::vector<double> path = bsm.generateRiskNeutralPricePath(putOption.getMaturity(), 1) ;
         double stockPrice = path.back() ;
         double payoff = putOption.payoff(stockPrice) ;
         total += payoff ;
@@ -61,7 +60,7 @@ double MonteCarloPricer::price (const PathIndependentOption& pathIndepentOption,
     
     double total = 0.0 ;
     for ( int i = 0 ; i < nScenarios ; i++) {
-        vector<double> pricePath = bsm.generateRiskNeutralPricePath(pathIndepentOption.getMaturity(), 1) ;
+        std::vector<double> pricePath = bsm.generateRiskNeutralPricePath(pathIndepentOption.getMaturity(), 1) ;
         double stockPrice = pricePath.back() ;
         double payoff = pathIndepentOption.payoff(stockPrice) ;
         total += payoff ;
@@ -72,4 +71,35 @@ double MonteCarloPricer::price (const PathIndependentOption& pathIndepentOption,
     double T = pathIndepentOption.getMaturity() - bsm.date ;
     
     return  exp(-r*T)*mean ;
+}
+
+/* Define and test price of a generic path-dependent option */
+
+double MonteCarloPricer::price(
+    const PathDependentOption& pathDependentOption,
+    const BlackScholesModel& bsm) {
+
+    double total = 0.0;
+
+    for (int i = 0; i < nScenarios; i++) {
+
+        // Path-dependent options need the whole simulated price path,
+        // not only the final stock price.
+        std::vector<double> pricePath =
+            bsm.generateRiskNeutralPricePath(
+                pathDependentOption.getMaturity(),
+                100);   // number of time steps along the path
+
+        double payoff = pathDependentOption.payoff(pricePath);
+
+        total += payoff;
+    }
+
+    double mean = total / nScenarios;
+
+    double r = bsm.riskFreeRate;
+
+    double T = pathDependentOption.getMaturity() - bsm.date;
+
+    return exp(-r * T) * mean;
 }

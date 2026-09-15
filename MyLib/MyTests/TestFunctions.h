@@ -25,6 +25,9 @@ void testDigitalCallOption() ;
 
 void testDigitalPutOption();
 
-void testIntegral() ; 
+void testIntegral() ;
+
+// Chap 12 - path depend option --> e.g Up and Out call option
+void testUpAndOutCallOption() ;
 
 #endif /* TestFunctions_h */

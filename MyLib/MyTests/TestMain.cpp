@@ -38,6 +38,9 @@ int main()
     // Test chap 10.6 - An interface for integration
     testIntegral();
     
+    // test chap 12.1 and 12.2
+    testUpAndOutCallOption() ;
+    
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     
     std::cout << "Running the tests with the old framework...\n" << std::endl;
