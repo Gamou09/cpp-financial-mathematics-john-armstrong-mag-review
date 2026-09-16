@@ -9,6 +9,8 @@
 #include "stdafx.h"
 #include "TestFunctions.h"
 
+#include "AsianCallOption.hpp"
+
 using namespace std;
 
 int main()
@@ -40,6 +42,12 @@ int main()
     
     // test chap 12.1 and 12.2
     testUpAndOutCallOption() ;
+    
+    // Test chap 12.8 The static keywords
+    testCallCountedSin() ;
+    
+    // Excercise 12.9.2
+    testAsianCallOption () ; 
     
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     

@@ -30,4 +30,8 @@ void testIntegral() ;
 // Chap 12 - path depend option --> e.g Up and Out call option
 void testUpAndOutCallOption() ;
 
+void testCallCountedSin() ;
+
+void testAsianCallOption() ; 
+
 #endif /* TestFunctions_h */

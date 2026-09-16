@@ -28,13 +28,30 @@ int main() {
         
     std::cout << "Running MyApp...\n";
 
+    std::cout << "C++ version: ";
+
+    if (__cplusplus >= 202302L)
+        std::cout << "C++23";
+    else if (__cplusplus >= 202002L)
+        std::cout << "C++20";
+    else if (__cplusplus >= 201703L)
+        std::cout << "C++17";
+    else if (__cplusplus >= 201402L)
+        std::cout << "C++14";
+    else if (__cplusplus >= 201103L)
+        std::cout << "C++11";
+    else
+        std::cout << "Pre-C++11";
+
+    std::cout << " (" << __cplusplus << ")" << std::endl;
+    
     std::cout << "\n1 - The call Option with default constructor\n";
     CallOption callOption;
 
     double spot = 120.0;
-    double strike = callOption.strike ;
+    double strike = callOption.getStrike() ;
     double payoff = callOption.payoff(spot);
-    double maturity = callOption.maturity ;
+    double maturity = callOption.getMaturity() ;
 
     std::cout << "Spot price: " << spot << '\n';
     std::cout << "Spot strike: " << strike << '\n';
@@ -45,9 +62,9 @@ int main() {
     CallOption callOption2(100, 5);
 
     double spot2 = 120.0;
-    double strike2 = callOption2.strike ;
+    double strike2 = callOption2.getStrike() ;
     double payoff2 = callOption2.payoff(spot);
-    double maturity2 = callOption2.maturity ;
+    double maturity2 = callOption2.getMaturity() ;
 
 
     std::cout << "Spot price: " << spot2 << '\n';

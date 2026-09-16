@@ -19,6 +19,12 @@ public:
 
     // Virtual destructor for safe polymorphic destruction.
     virtual ~PathDependentOption() = default;
+    
+    // constructor
+    PathDependentOption(): ContinuousTimeOptionBase() {} ;
+    
+    PathDependentOption(double strike_, double maturity_)
+        : ContinuousTimeOptionBase(strike_, maturity_) {}
 
     // Payoff depends on the full simulated stock-price path.
     // Each path-dependent option must provide its own implementation.
