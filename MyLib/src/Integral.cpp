@@ -8,6 +8,9 @@
 #include "Integral.hpp"
 #include "RealFunction.h"
 #include "PathIndependentOption.hpp"
+#include "ContinuousTimeOption.h"
+
+#include <vector>
 
 double integral (const RealFunction& f,
                  double a,
@@ -45,7 +48,8 @@ double integralPayOff(double a,
         PayoffFunction(const PathIndependentOption& option): option(option) {};
         
         /* Overriding function */
-        double evaluate( double x) const override  {return option.payoff(x) ; }
+        double evaluate(double x) const override  {return option.payoff(x) ; }
+        
     } ;
     
     PayoffFunction integrand (option) ;

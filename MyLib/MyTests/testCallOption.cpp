@@ -13,7 +13,7 @@
 static void testCallOptionPayoff(){
     
     CallOption callOption;
-    callOption.strike = 105.0 ;
+    callOption.setStrike(105.0) ;
     
     // OTM
     double stockAtMaturity = 100 ;
@@ -29,8 +29,8 @@ static void testCallOptionPayoff(){
 static void testCallOptionPrice(){
     
     CallOption callOption;
-    callOption.strike = 105.0 ;
-    callOption.maturity = 2.0 ;
+    callOption.setStrike(105.0)  ;
+    callOption.setMaturity(2.0) ;
     
     BlackScholesModel bsm ;
     bsm.date = 1.0 ;

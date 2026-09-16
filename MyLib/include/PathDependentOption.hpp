@@ -9,20 +9,31 @@
 #define PathDependentOption_h
 
 #include <vector>
+#include "ContinuousTimeOptionBase.h"
 
 class BlackScholesModel;
 
-class PathDependentOption {
+class PathDependentOption : public ContinuousTimeOptionBase {
 
 public:
-    
-    // get the maturity
-    virtual double getMaturity() const = 0;
 
-    // Payoff depends on the whole simulated stock-price path
-    virtual double payoff(const std::vector<double>& path) const = 0;
-
+    // Virtual destructor for safe polymorphic destruction.
     virtual ~PathDependentOption() = default;
-};
 
+    // Payoff depends on the full simulated stock-price path.
+    // Each path-dependent option must provide its own implementation.
+    //
+    // Unlike PathIndependentOption, no payoff adapter is needed here.
+    // Path-dependent options already use the full stock-price path,
+    // which directly matches the payoff interface defined in
+    // ContinuousTimeOptionBase.
+
+    // A path-dependent option depends on the full stock-price path,
+    // not only on the final stock price.
+    bool isPathDependent() const override {
+        return true;
+    }
+
+};
 #endif /* PathDependentOption_h */
+

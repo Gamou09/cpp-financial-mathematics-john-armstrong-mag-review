@@ -13,27 +13,28 @@
 
 class BlackScholesModel ;
 
-// Significant benefit opf seperating the the Model to the Options
-// the option is the contract and doesn't change when market changed even though its price may vary
-class CallOption: public PathIndependentOption {
+// Separating the model from the option is an important design choice:
+// the option represents the contract and does not change when market
+// conditions change, even though its price may change.
+
+class CallOption : public PathIndependentOption {
 
 public:
-    // default constructor
-    CallOption();
+
+    // Constructors and common option data such as strike and maturity
+    // are inherited from ContinuousTimeOptionBase.
+    CallOption(): PathIndependentOption() {} ;
     
-    // constructor with parameter
-    CallOption(double strike, double maturity) ;
-    
-    // member variable
-    double strike;
-    double maturity ;
-    
-    // member function aka method
-    double price (const BlackScholesModel& bsm) const ;
-    
-    // function overriden from the interface
-    double payoff ( double stockAtMaturity) const override;
-    double getMaturity() const override;
-} ;
+    CallOption(double strike_, double maturity_)
+    : PathIndependentOption(strike_, maturity_) {} ;
+
+    // Override the pricing function because a European call option
+    // can be priced analytically using the Black-Scholes formula
+    // rather than using the default MonteCarlo Implementation by ContinuousTimeOptionBase
+    double price(const BlackScholesModel& bsm) const override;
+
+    // Call-specific payoff at maturity.
+    double payoff(double stockAtMaturity) const override;
+};
 
 #endif /* CallOption_hpp */

@@ -12,20 +12,50 @@
 // Modern and simpler C++ need to prevent circular inclusion
 #pragma once
 
-// we don't need this line as the PathIndependentOption should be self contain with only built in C++ functions
-// #include "stdafx.h"
+#include "ContinuousTimeOptionBase.h"
+#include <vector>
 
-class PathIndependentOption {
-    
+/**
+ * @brief Abstract base class for path-independent options.
+ *
+ * A path-independent option depends only on the underlying asset price
+ * at maturity, rather than on the full price path.
+ *
+ * This class adapts the path-based payoff interface inherited from
+ * ContinuousTimeOptionBase to a simpler payoff function that takes only
+ * the final stock price.
+ *
+ * Concrete subclasses, such as CallOption and PutOption, implement the
+ * scalar payoff(double) function.
+ */
+
+
+class PathIndependentOption : public ContinuousTimeOptionBase {
+
 public:
-    /* A virtual destructor */
-    virtual ~PathIndependentOption() {}
     
-    /* Return the payoff at maturtity */
-    virtual double payoff(double finalStockPrice) const = 0 ;
+    PathIndependentOption(): ContinuousTimeOptionBase() {} ;
     
-    /* Return the maturity of the option */
-    virtual double getMaturity() const = 0 ;
+    PathIndependentOption(double strike_, double maturity_)
+        : ContinuousTimeOptionBase(strike_, maturity_) {}
+
+    // Virtual destructor for safe polymorphic destruction.
+    virtual ~PathIndependentOption() = default;
+
+    // Return the payoff based on the stock price at maturity.
+    // Each path-independent option must provide its own implementation.
+    virtual double payoff(double finalStockPrice) const = 0;
+
+    // Adapt the full price-path payoff interface to the path-independent case.
+    // Only the final stock price is needed.
+    double payoff(const std::vector<double>& stockPrices) const override {
+        return payoff(stockPrices.back());
+    }
+
+    // A path-independent option depends only on the final stock price.
+    bool isPathDependent() const override {
+        return false;
+    }
 };
 
 // see line 8-12 comments

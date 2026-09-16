@@ -9,15 +9,11 @@
 #include "UpAndOutCallOption.hpp"
 #include <algorithm>   // std::max
 
-#include "MonteCarloPricer.hpp"
 
 // constructor
-UpAndOutCallOption::UpAndOutCallOption(double strike, double barrier, double maturity)
-    : strike(strike), barrier(barrier), maturity(maturity) {
-}
-
-double UpAndOutCallOption::getMaturity() const {
-    return maturity;
+UpAndOutCallOption::UpAndOutCallOption(double strike_, double barrier_, double maturity_)
+    : barrier(barrier_){
+        setStrike(strike_), setMaturity(maturity_) ;
 }
 
 double UpAndOutCallOption::payoff(const std::vector<double>& path) const{
@@ -36,14 +32,5 @@ double UpAndOutCallOption::payoff(const std::vector<double>& path) const{
     // like an ordinary European call at maturity.
     const double finalSpot = path.back();
 
-    return std::max(finalSpot - strike, 0.0);
-}
-
-
-double UpAndOutCallOption::price(const BlackScholesModel& model) const {
-
-    MonteCarloPricer pricer ;
-
-    // we can also use *this to obtain the reference to the current object
-    return pricer.price(*this, model) ;
+    return std::max(finalSpot - getStrike(), 0.0);
 }

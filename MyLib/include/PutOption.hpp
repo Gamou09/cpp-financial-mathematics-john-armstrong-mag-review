@@ -8,35 +8,49 @@
 #ifndef PutOption_hpp
 #define PutOption_hpp
 
-#include "PathIndependentOption.hpp"
+#include "ContinuousTimeOptionBase.h"
 
 class BlackScholesModel ; 
 
-// Significant benefit opf seperating the the Model to the Options
-// the option is the contract and doesn't change when market changed even though its price may vary
-class PutOption: public PathIndependentOption {
+// Significant benefit of separating the Model from the Option:
+// the option represents the contract and does not change when the market changes,
+// even though its price may vary.
+//
+// Sep 15: changed superclass from PathIndependentOption
+// to ContinuousTimeOptionBase.
+//
+// Because PutOption now inherits from ContinuousTimeOptionBase,
+// we no longer need to redeclare the common option data members
+// such as strike and maturity.
+//
+// We also inherit the common getter/setter functions:
+//      getStrike(), getMaturity(), setStrike(), setMaturity()
+//
+// PutOption therefore only needs to define behaviour that is specific
+// to a put option.
 
-// member variables in private to align with design principle of Encapsulation
-private:
-    double strike;
-    double maturity ;
+class PutOption: public ContinuousTimeOptionBase {
+
 
 public:
+    
     // declarations of constructors
-    PutOption();
-    PutOption(const double strike_, const double maturity_);
+    // No more constructor by PutOption since the member variables are from Parent class
     
-    // setter function member
-    void setStrike ( double inputStrike) ;
-    void setMaturity ( double inputMaturity) ;
-    
-    // method to be used
-    double payoff ( double stockAtMaturity) const ;
-    double price ( const BlackScholesModel& bsm) const ;
-    
-    // getter function member
-    double getStrike () const ;
-    double getMaturity () const ;
+    // Put-specific payoff implementation.
+    // This overrides the pure virtual function declared in
+    // the ContinuousTimeOption interface.
+    double payoff(const std::vector<double>& stockPrices) const override;
+
+    // A standard European put only depends on the stock price at maturity.
+    // since its payoff depends only on the stock price at maturity.
+    bool isPathDependent() const override { return false; }
+
+    // Price the option using the supplied Black-Scholes model.
+    // using they keyword override for compiler
+    // to check that we have appropriately override the parent class virtual price function
+    // No change in the behaviour of the program but help compiler check for you and very helpful for debuggin
+    double price(const BlackScholesModel& bsm) const override;
 } ;
 
 #endif /* PutOption_hpp */

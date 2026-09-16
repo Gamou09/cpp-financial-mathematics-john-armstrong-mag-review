@@ -5,56 +5,50 @@
 //  Created by Martial Aguessi on 26/06/2025.
 //
 
-// we will be specific and prefer to add the proper header file
-// #include "stdafx.h"
 #include "PutOption.hpp"
 #include "BlackScholesModel.hpp"
 
-// defintion of constructors
-PutOption::PutOption(): strike(0.0), maturity(0.0){};
-PutOption::PutOption(const double strike_, const double maturity_) : strike(strike_), maturity(maturity_){};
+#include <cmath>
 
-// getter functions
-double PutOption::getStrike() const {
-    return strike ;
+
+// Put-specific payoff implementation.
+// Overrides the pure virtual function declared in the
+// ContinuousTimeOption interface.
+// The "override" keyword is used only in the class declaration in the header.
+double PutOption::payoff(const std::vector<double>& stockPrices) const {
+
+    const double stockAtMaturity = stockPrices.back();
+
+    // Strike is stored in ContinuousTimeOptionBase
+    // and inherited through the public getter.
+    if (stockAtMaturity < getStrike()) {
+        return getStrike() - stockAtMaturity;
+    }
+
+    return 0.0;
 }
 
-double PutOption::getMaturity() const {
-    return maturity ;
-}
 
-// questions - how to I test these function ?
+// Price the option using the supplied Black-Scholes model.
+// the override key word used in declaration allow to deviate from parent class defintion
+// e.g. here in particular, we want to use usual black and Scholes than Monte Carlo
+double PutOption::price(const BlackScholesModel& bsm) const {
 
-// Setter functions to be used since the member variables are private
-void PutOption::setStrike(double inputStrike){
-    strike = inputStrike ;
-}
+    const double S = bsm.stockPrice;
+    const double K = getStrike();
+    const double sigma = bsm.volatility;
+    const double r = bsm.riskFreeRate;
+    const double T = getMaturity() - bsm.date;
 
-void PutOption::setMaturity(double inputMaturity){
-    maturity = inputMaturity ;
-}
+    const double numerator =
+        std::log(S / K) + (r + 0.5 * sigma * sigma) * T;
 
-// Implementation of PutOption class methods
-double PutOption::payoff( double stockAtMaturity) const {
-    
-    // we don't nee to pass strike as a arg of the method payoff since it's already a member variable of the class PutOption
-    if (stockAtMaturity < strike) return strike - stockAtMaturity ;
-    else return 0.0 ;
-}
+    const double denominator =
+        sigma * std::sqrt(T);
 
-double PutOption::price( const BlackScholesModel& bsm) const {
-    
-    double S = bsm.stockPrice ;
-    double K = strike ;
-    double sigma = bsm.volatility ;
-    double r = bsm.riskFreeRate ;
-    double T = maturity - bsm.date ;
-    
-    double numerator = log(S/K) + (r + sigma*sigma*0.5)*T ;
-    double denominator = sigma*sqrt(T) ;
-    
-    double d1 = numerator / denominator ;
-    double d2 = d1 - denominator ;
-    
-    return K*exp(-r*T)*normcdf(-d2) - S*normcdf(-d1);
+    const double d1 = numerator / denominator;
+    const double d2 = d1 - denominator;
+
+    return K * std::exp(-r * T) * normcdf(-d2)
+         - S * normcdf(-d1);
 }

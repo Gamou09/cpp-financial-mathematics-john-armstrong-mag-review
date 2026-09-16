@@ -20,8 +20,8 @@ static void testPriceCallOption(){
     
     // definition the call option
     CallOption c ;
-    c.strike = 110 ;
-    c.maturity = 2 ;
+    c.setStrike(110.0) ;
+    c.setMaturity(2.0) ;
     
     // definition of the model
     BlackScholesModel bsm ;
@@ -79,18 +79,19 @@ static void testPutAndCall(){
     
     // Define call option
     CallOption c ;
-    c.strike = 110 ;
-    c.maturity = 2;
+    c.setStrike(110) ;
+    c.setMaturity(2.0) ;
 
     // definte Put option
     PutOption p ;
-    p.setStrike(c.strike) ;
-    p.setMaturity(c.maturity) ;
+    p.setStrike(c.getStrike()) ;
+    p.setMaturity(c.getMaturity()) ;
     
     // Our pricer can price puts and calls
     MonteCarloPricer pricer ;
     double priceC = pricer.price(c,m);
     ASSERT_APPROX_EQUAL(priceC, c.price(m), 0.2);
+    
     double priceP = pricer.price(p,m);
     ASSERT_APPROX_EQUAL(priceP, p.price(m), 0.2);
     
@@ -149,7 +150,9 @@ void testMonteCarloPricer() {
     std::cout << "\n.... Start of testMonteCarloPricer ....\n" << std::endl;
     
     TEST( testPriceCallOption ) ;
+    
     TEST( testPricePutOption ) ;
+    
     TEST( testPutAndCall ) ;
     
     setDebugEnabled(true) ;

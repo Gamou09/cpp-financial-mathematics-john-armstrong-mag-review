@@ -8,6 +8,8 @@
 #ifndef Header_h
 #define Header_h
 
+#include <vector>
+
 class RealFunction {
     
 public:
@@ -16,6 +18,7 @@ public:
     
     /* This method is abstract there is no definition*/
     virtual double evaluate (double x) const = 0 ;
+    
     
 };
 

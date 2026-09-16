@@ -31,13 +31,15 @@ static void testPutOptionPayoff(){
     putOption.setStrike(105.0) ;
     
     // ITM
-    double stockAtMaturity = 100 ;
-    double payoff = putOption.payoff(stockAtMaturity) ;
+    // double stockAtMaturity = 100 ;
+    std::vector<double> stockPrices = {80, 95, 100} ;
+    double payoff = putOption.payoff(stockPrices) ;
     ASSERT_APPROX_EQUAL(payoff, 5, 1e-2) ;
     
     // OTM
-    double stockAtMaturity2 = 110 ;
-    double payoff2 = putOption.payoff(stockAtMaturity2) ;
+    // double stockAtMaturity2 = 110 ;
+    std::vector<double> stockPrices2 = {80, 100, 110} ;
+    double payoff2 = putOption.payoff(stockPrices2) ;
     ASSERT_APPROX_EQUAL(payoff2, 0, 1e-2) ;
 }
 

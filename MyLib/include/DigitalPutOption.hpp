@@ -14,30 +14,17 @@ class BlackScholesModel ;
 
 class DigitalPutOption: public PathIndependentOption {
     
-private:
-    
-    // member variables
-    double strike ;
-    double maturity ;
-    
 public:
     
     // default constructor
-    DigitalPutOption();
+    DigitalPutOption(): PathIndependentOption() {};
 
     // constructor with parameters
-    DigitalPutOption(double strike, double maturity);
-    
-    // getter functions since the member variables are private
-    double getStrike() const;
-    double getMaturity() const override ; // always a mandatory function from the intercface
-    
-    // member variables setter functions
-    void setStrike( double strike);
-    void setMaturity( double maturity) ; //
+    DigitalPutOption(double strike_, double maturity_)
+        : PathIndependentOption(strike_, maturity_) {} ;
     
     // Analytical solution
-    double price ( const BlackScholesModel& bsm) const ;
+    double price ( const BlackScholesModel& bsm) const override;
     
     // Inherited functinos from interface
     double payoff(double finalStockPrice) const override ;

@@ -14,33 +14,25 @@ class BlackScholesModel ;
 
 class DigitalCallOption : public PathIndependentOption {
 
-private:
-
-    // member variables
-    double strike;
-    double maturity;
 
 public:
-
-    // default constructor
-    DigitalCallOption();
-
-    // constructor with parameters
-    DigitalCallOption(double strike, double maturity);
-
-    // member variable setters
-    void setStrike(double strike);
-    void setMaturity(double maturity);
-
-    // member variable getters
-    double getStrike() const;
-    double getMaturity() const override; // Also a function overriden from the interface
     
-    // member function / method
-    double price(const BlackScholesModel& bsm) const;
+    // Data members and getters/setters are inherited.
+    //
+    // Constructors are different:
+    // base-class constructors are not automatically inherited by the derived class.
+    //
+    // Therefore DigitalCallOption explicitly provides its constructor and
+    // delegates initialization of strike and maturity to PathIndependentOption.
+    DigitalCallOption(): PathIndependentOption() {} ;
+    
+    DigitalCallOption(double strike_, double maturity_)
+    : PathIndependentOption(strike_, maturity_) {} ; 
 
     // functions overridden from the interface
     double payoff(double stockAtMaturity) const override;
+    
+    double price(const BlackScholesModel& bsm) const override;
 };
 
 #endif /* DigitalCallOption_hpp */

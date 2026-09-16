@@ -9,41 +9,10 @@
 #include "BlackScholesModel.hpp"
 #include "matlib.h"
 
-
-// default constructor
-DigitalCallOption::DigitalCallOption() : strike(0.0), maturity(0.0) {}
-
-// constructor with parameters
-DigitalCallOption::DigitalCallOption(double s, double m): strike(s), maturity(m) {}
-
-// setter
-void DigitalCallOption::setStrike(double strike)
-{
-    this->strike = strike;
-}
-
-// setter
-void DigitalCallOption::setMaturity(double maturity)
-{
-    this->maturity = maturity;
-}
-
-// getter
-double DigitalCallOption::getStrike() const
-{
-    return strike;
-}
-
-// getter / override from PathIndependentOption
-double DigitalCallOption::getMaturity() const
-{
-    return maturity;
-}
-
 // payoff of a cash-or-nothing digital call
 double DigitalCallOption::payoff(double stockAtMaturity) const
 {
-    if (stockAtMaturity > strike)
+    if (stockAtMaturity > getStrike())
     {
         return 1.0;
     }
@@ -54,11 +23,11 @@ double DigitalCallOption::payoff(double stockAtMaturity) const
 // analytical Black-Scholes price
 double DigitalCallOption::price(const BlackScholesModel& bsm) const
 {
-    double timeToMaturity = maturity - bsm.date;
+    double timeToMaturity = getMaturity() - bsm.date;
 
     double d2 =
         (
-            std::log(bsm.stockPrice / strike)
+            std::log(bsm.stockPrice / getStrike())
             +
             (
                 bsm.riskFreeRate

@@ -10,48 +10,54 @@
 
 #pragma once
 
-// we only need forward declaratiion here since the object are passed by reference "...&"
-// #include "PathIndependentOption.hpp"
-// #include "BlackScholesModel.hpp"
-// #include "CallOption.hpp"
-// #include "PutOption.hpp"
-class CallOption ;
-class PutOption ;
-class PathIndependentOption ;
-class BlackScholesModel ;
+// Forward declarations are sufficient because the objects are passed
+// by reference. Full class definitions are included in the .cpp file.
+class ContinuousTimeOptionBase;
+class BlackScholesModel;
 
-class PathDependentOption;
-
+/**
+ * @brief Monte Carlo pricer for continuous-time options.
+ *
+ * The pricer is separated from both the option contract and the market model.
+ * It uses BlackScholesModel to generate simulated price paths and delegates
+ * payoff evaluation to the option through the ContinuousTimeOptionBase interface.
+ */
 class MonteCarloPricer {
-    
+
 public:
-    /* Constructor */
-    MonteCarloPricer() ;
+
+    /**
+     * @brief Construct a Monte Carlo pricer with the default number of scenarios and steps
+     */
+    MonteCarloPricer();
     
-    /* Number of scenarios */
+    /**
+     * @brief Construct a Monte Carlo pricer with the user input on  number of scenarios.
+     */
+    MonteCarloPricer(int nScenarios_, int nSteps_);
+
+    /**
+     * @brief Number of Monte Carlo scenarios used in the simulation.
+     */
     int nScenarios;
     
-    /* Price a call option */
-    double price (const CallOption& callOption,
-                  const BlackScholesModel& bsm) ;
-        
-    /* Price a put option */
-    double price (const PutOption& putOption,
-                  const BlackScholesModel& bsm) ;
-    
-    /* Price a path independent option like Europreqn Put and Call  utilizing interface notion  */
-    /* help avoid copy and easility extendable class by inherittance */
-    /* Price a PathIndependentOption */
-    double price (const PathIndependentOption& option,
-                                   const BlackScholesModel& bsm) ;
-    
-    /*
-     This is the price calculation for PathDependentOption
-     So far UpandOutCallOption
+    /**
+     * @brief Number of Monte Carlo steps used in the simulation.
      */
-    double price(const PathDependentOption& option,
-                 const BlackScholesModel& bsm);
-    
-};
+    int nSteps;
 
-// #endif /* MonteCarloPricer_hpp */
+    /**
+     * @brief Price any option derived from ContinuousTimeOptionBase.
+     *
+     * Refactored to use a single polymorphic pricing interface.
+     *
+     * Previous overloads for CallOption, PutOption, PathIndependentOption,
+     * and PathDependentOption were removed because all these option types
+     * ultimately inherit from ContinuousTimeOptionBase.
+     *
+     * This avoids duplicated pricing logic and allows new option types
+     * to work with MonteCarloPricer without adding new price() overloads.
+     */
+    double price(const ContinuousTimeOptionBase& option,
+                 const BlackScholesModel& bsm);
+};

@@ -5,101 +5,80 @@
 //  Created by Martial Aguessi on 30/06/2025.
 //
 
-// we want to precise and directly call the header needed
-// #include "stdafx.h"
 #include "MonteCarloPricer.hpp"
 #include "BlackScholesModel.hpp"
-#include "CallOption.hpp"
-#include "PutOption.hpp"
-#include "PathDependentOption.hpp"
+#include "ContinuousTimeOptionBase.h"
+#include <cmath>
+#include <vector>
 
-/* define Constructor */
-MonteCarloPricer::MonteCarloPricer() : nScenarios(10000) {};
+// Construct the pricer with the default number of Monte Carlo scenarios.
+// Default is 1,000 scenarios and 252 steps
+MonteCarloPricer::MonteCarloPricer() : nScenarios(10000), nSteps(252) {}
 
-/* define and test Price a call option */
-double MonteCarloPricer::price (const CallOption& callOption,
-                                const BlackScholesModel& bsm) {
-    
-    double total = 0.0 ;
-    for ( int i = 0 ; i < nScenarios ; i++) {
-        std::vector<double> path = bsm.generateRiskNeutralPricePath(callOption.maturity, 1) ;
-        double stockPrice = path.back() ;
-        double payoff = callOption.payoff(stockPrice) ;
-        total += payoff ;
-    }
-    
-    double mean = total / nScenarios ;
-    double r = bsm.riskFreeRate ;
-    double T = callOption.maturity - bsm.date ;
-    
-    return  exp(-r*T)*mean ;
-}
+MonteCarloPricer::MonteCarloPricer(int nScenarios_, int nSteps_): nScenarios(nScenarios_), nSteps(nSteps_) {}
 
-/* define and test Price a put option */
-double MonteCarloPricer::price (const PutOption& putOption,
-                                const BlackScholesModel& bsm) {
-    
-    double total = 0.0 ;
-    for ( int i = 0 ; i < nScenarios ; i++) {
-        std::vector<double> path = bsm.generateRiskNeutralPricePath(putOption.getMaturity(), 1) ;
-        double stockPrice = path.back() ;
-        double payoff = putOption.payoff(stockPrice) ;
-        total += payoff ;
-    }
-    
-    double mean = total / nScenarios ;
-    double r = bsm.riskFreeRate ;
-    double T = putOption.getMaturity() - bsm.date ;
-    
-    return  exp(-r*T)*mean ;
-}
+/*
+ Price any option derived from ContinuousTimeOptionBase.
 
-/* define and test Price a generic Path independent option */
-double MonteCarloPricer::price (const PathIndependentOption& pathIndepentOption,
-                                const BlackScholesModel& bsm) {
-    
-    double total = 0.0 ;
-    for ( int i = 0 ; i < nScenarios ; i++) {
-        std::vector<double> pricePath = bsm.generateRiskNeutralPricePath(pathIndepentOption.getMaturity(), 1) ;
-        double stockPrice = pricePath.back() ;
-        double payoff = pathIndepentOption.payoff(stockPrice) ;
-        total += payoff ;
-    }
-    
-    double mean = total / nScenarios ;
-    double r = bsm.riskFreeRate ;
-    double T = pathIndepentOption.getMaturity() - bsm.date ;
-    
-    return  exp(-r*T)*mean ;
-}
+ Refactoring note:
+ Previous overloads for CallOption, PutOption, PathIndependentOption,
+ and PathDependentOption have been removed.
 
-/* Define and test price of a generic path-dependent option */
+ All these option types ultimately inherit from ContinuousTimeOptionBase,
+ so a single polymorphic price() function is sufficient.
 
-double MonteCarloPricer::price(
-    const PathDependentOption& pathDependentOption,
-    const BlackScholesModel& bsm) {
+ The Monte Carlo pricer is therefore responsible only for:
+ 1. generating simulated stock-price paths,
+ 2. passing each path to the option,
+ 3. averaging the resulting payoffs,
+ 4. discounting the expected payoff back to the model date.
 
+ The option itself decides how the simulated path is used.
+
+ For a path-dependent option, payoff() may inspect the entire path.
+
+ For a path-independent option, ContinuousTimeOptionBase is used through
+ the PathIndependentOption adapter, which extracts the final stock price
+ and forwards it to payoff(double).
+
+ As a result, MonteCarloPricer does not need to know whether the concrete
+ option is path-dependent or path-independent.
+ 
+ */
+
+double MonteCarloPricer::price(const ContinuousTimeOptionBase& option,
+                               const BlackScholesModel& bsm) {
     double total = 0.0;
 
     for (int i = 0; i < nScenarios; i++) {
 
-        // Path-dependent options need the whole simulated price path,
-        // not only the final stock price.
+        // Always generate and pass a complete simulated price path.
+        //
+        // Path-dependent options use the path directly.
+        //
+        // Path-independent options ignore the intermediate values through
+        // their adapter implementation and use only the final stock price.
+        //
+        // This keeps the pricing algorithm generic and avoids special-case
+        // logic based on the concrete option type.
+        
         std::vector<double> pricePath =
-            bsm.generateRiskNeutralPricePath(
-                pathDependentOption.getMaturity(),
-                100);   // number of time steps along the path
+                bsm.generateRiskNeutralPricePath(
+                option.getMaturity(),
+                100);  // number of simulation time steps
 
-        double payoff = pathDependentOption.payoff(pricePath);
+        double payoff = option.payoff(pricePath);
 
         total += payoff;
     }
 
+    // Estimate the risk-neutral expected payoff.
     double mean = total / nScenarios;
 
+    // Discount the expected payoff from maturity back to the model date.
     double r = bsm.riskFreeRate;
+    double T = option.getMaturity() - bsm.date;
 
-    double T = pathDependentOption.getMaturity() - bsm.date;
-
-    return exp(-r * T) * mean;
+    return std::exp(-r * T) * mean;
 }
+

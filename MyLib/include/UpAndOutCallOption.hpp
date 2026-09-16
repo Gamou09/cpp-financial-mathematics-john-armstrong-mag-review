@@ -24,18 +24,18 @@ class UpAndOutCallOption: public PathDependentOption  {
     //   the barrier and finishes above the strike.
 
 private:
-    double strike ;
+    
+    // Specifc new member variable
     double barrier ;
-    double maturity ;
     
 public:
-    UpAndOutCallOption(double strike, double barrier, double maturity);
-
-    double payoff(const std::vector<double>& path) const override;
     
-    double getMaturity() const override;
-
-    double price(const BlackScholesModel& model) const;
+    UpAndOutCallOption(): PathDependentOption() {} ; 
+    
+    UpAndOutCallOption(double strike_, double barrier_, double maturity_) ;
+    
+    double payoff(const std::vector<double>& stockPrices) const override ; 
+    
 };
 
 #endif /* UpAndOutOption_hpp */
