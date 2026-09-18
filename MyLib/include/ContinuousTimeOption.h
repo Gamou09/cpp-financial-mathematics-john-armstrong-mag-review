@@ -9,6 +9,7 @@
 #define ContinuousTimeOption_h
 
 #include <vector>
+#include "Priceable.h"
 
 // Build an interface for continuous Time Option
 // In C++, an interface is usually just a special kind of class.
@@ -30,7 +31,7 @@
 
 // An abstract class is a class that contains at LEAST one abstract function
 
-class ContinuousTimeOption {
+class ContinuousTimeOption: public Priceable {
     
 public:
     /* Virtual destructor*/

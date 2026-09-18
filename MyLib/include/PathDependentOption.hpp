@@ -8,7 +8,6 @@
 #ifndef PathDependentOption_h
 #define PathDependentOption_h
 
-#include <vector>
 #include "ContinuousTimeOptionBase.h"
 
 class BlackScholesModel;

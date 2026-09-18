@@ -25,11 +25,11 @@ static void testPriceCallOption(){
     
     // definition of the model
     BlackScholesModel bsm ;
-    bsm.volatility = 0.1 ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.stockPrice = 100 ;
-    bsm.drift = 0.1 ;
-    bsm.date = 1 ;
+    bsm.setVolatility(0.1) ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setStockPrice(100.0) ;
+    bsm.setDrift(0.1) ;
+    bsm.setDate(1.0);
     
     // Price using Monte Carlo
     MonteCarloPricer monteCarloPricer ;
@@ -51,11 +51,11 @@ static void testPricePutOption(){
     
     // definition of the model
     BlackScholesModel bsm ;
-    bsm.volatility = 0.1 ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.stockPrice = 100 ;
-    bsm.drift = 0.1 ;
-    bsm.date = 1 ;
+    bsm.setVolatility(0.1) ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setStockPrice(100.0) ;
+    bsm.setDrift(0.1) ;
+    bsm.setDate(1.0);
     
     // Use the pricer
     MonteCarloPricer monteCarloPricer ;
@@ -72,10 +72,10 @@ static void testPutAndCall(){
     
     // Definte the Black-Scholes model
     BlackScholesModel m;
-    m.volatility = 0.1 ;
-    m.riskFreeRate = 0.05 ;
-    m.stockPrice = 100.0 ;
-    m.drift = 0.1 ;
+    m.setVolatility(0.1) ;
+    m.setRiskFreeRate(0.05) ;
+    m.setStockPrice(100.0) ;
+    m.setDrift(0.1) ;
     
     // Define call option
     CallOption c ;
@@ -104,10 +104,10 @@ static void testDigitalCallOption(){
     
     // Definte the Black-Scholes model
     BlackScholesModel m;
-    m.volatility = 0.1 ;
-    m.riskFreeRate = 0.05 ;
-    m.stockPrice = 100.0 ;
-    m.drift = 0.1 ;
+    m.setVolatility(0.1) ;
+    m.setRiskFreeRate(0.05) ;
+    m.setStockPrice(100.0) ;
+    m.setDrift(0.1) ;
 
     // Define Digital Call Option
     DigitalCallOption digitCallOption(100, 2) ;
@@ -122,11 +122,11 @@ static void testDigitalCallOption(){
 static void testMonteCarloPricerPathDependentOption() {
 
     BlackScholesModel bsm;
-
-    bsm.date = 0.0;
-    bsm.stockPrice = 100.0;
-    bsm.riskFreeRate = 0.05;
-    bsm.volatility = 0.20;
+    
+    bsm.setVolatility(0.2) ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setStockPrice(100.0) ;
+    bsm.setDate(0.0);
 
     UpAndOutCallOption option(
         100.0,

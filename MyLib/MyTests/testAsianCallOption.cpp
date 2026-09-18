@@ -129,10 +129,10 @@ static void testAsianCallOptionPrice() {
 
     BlackScholesModel bsm;
 
-    bsm.date = 0.0;
-    bsm.stockPrice = 100.0;
-    bsm.riskFreeRate = 0.0;
-    bsm.volatility = 0.0;
+    bsm.setDate(0.0);
+    bsm.setStockPrice(100.0);
+    bsm.setRiskFreeRate(0.0) ;
+    bsm.setVolatility(0.0) ;
 
     AsianCallOption option(
         90.0,   // strike

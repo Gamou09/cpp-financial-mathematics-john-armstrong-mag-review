@@ -41,16 +41,17 @@ public:
 
     // Virtual destructor for safe polymorphic destruction.
     virtual ~PathIndependentOption() = default;
-
-    // Return the payoff based on the stock price at maturity.
-    // Each path-independent option must provide its own implementation.
-    virtual double payoff(double finalStockPrice) const = 0;
-
+    
     // Adapt the full price-path payoff interface to the path-independent case.
     // Only the final stock price is needed.
     double payoff(const std::vector<double>& stockPrices) const override {
         return payoff(stockPrices.back());
     }
+
+    // Return the payoff based on the stock price at maturity.
+    // Each path-independent option must provide its own implementation.
+    virtual double payoff(double finalStockPrice) const = 0;
+
 
     // A path-independent option depends only on the final stock price.
     bool isPathDependent() const override {

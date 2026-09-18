@@ -16,10 +16,10 @@ static void testBlackScholesModelGeneratePricePath(){
     
     // bsm model inputs
     BlackScholesModel bsm ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.volatility = 0.1 ;
-    bsm.stockPrice = 100.0 ;
-    bsm.date = 2.0 ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setVolatility(0.1) ;
+    bsm.setStockPrice(100.0) ;
+    bsm.setDate(2.0) ;
     
     // test input
     int nSteps = 1000 ;
@@ -27,7 +27,7 @@ static void testBlackScholesModelGeneratePricePath(){
     
     // generate path function test
     vector<double> path = bsm.generatePricePath(maturity, nSteps) ;
-    double dt = (maturity - bsm.date)/nSteps ;
+    double dt = (maturity - bsm.getDate())/nSteps ;
     
     vector<double> times = linespace(dt, maturity, nSteps);
     
@@ -44,10 +44,10 @@ static void testBlackScholesModelRiskNeutralPricePath(){
     
     // bsm model inputs
     BlackScholesModel bsm ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.volatility = 0.1 ;
-    bsm.stockPrice = 100.0 ;
-    bsm.date = 2.0 ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setVolatility(0.1) ;
+    bsm.setStockPrice(100.0) ;
+    bsm.setDate(2.0) ;
     
     // test input
     int nPaths = 10000 ;
@@ -61,7 +61,7 @@ static void testBlackScholesModelRiskNeutralPricePath(){
         finalPrices[i] = path.back() ;
     }
     
-    ASSERT_APPROX_EQUAL(mean_function_v2(finalPrices), exp(bsm.riskFreeRate*(maturity - bsm.date))*bsm.stockPrice, 0.5) ;
+    ASSERT_APPROX_EQUAL(mean_function_v2(finalPrices), exp(bsm.getRiskFreeRate()*(maturity - bsm.getDate()))*bsm.getStockPrice(), 0.5) ;
     
 }
 
@@ -71,10 +71,10 @@ static void testBlackScholesSimulateStCSV(){
     
     // Parameters
     BlackScholesModel bsm ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.volatility = 0.2 ;
-    bsm.stockPrice = 100.0 ;
-    bsm.date = 1.0 ;
+    bsm.setRiskFreeRate(0.25);
+    bsm.setVolatility(0.2) ;
+    bsm.setStockPrice(100.0);
+    bsm.setDate(1.0) ;
     int N = 10000 ; // Number of simulation
     
     vector<double> prices ;

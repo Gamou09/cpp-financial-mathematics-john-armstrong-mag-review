@@ -20,11 +20,11 @@ double CallOption::payoff( double stockAtMaturity) const {
 
 double CallOption::price( const BlackScholesModel& bsm) const {
     
-    double S = bsm.stockPrice ;
+    double S = bsm.getStockPrice() ;
     double K = getStrike() ;
-    double sigma = bsm.volatility ;
-    double r = bsm.riskFreeRate ;
-    double T = getMaturity() - bsm.date ;
+    double sigma = bsm.getVolatility() ;
+    double r = bsm.getRiskFreeRate() ;
+    double T = getMaturity() - bsm.getDate() ;
     
     double numerator = log(S/K) + (r + sigma*sigma*0.5)*T ;
     double denominator = sigma*sqrt(T) ;

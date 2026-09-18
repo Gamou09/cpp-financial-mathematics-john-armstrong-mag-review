@@ -76,8 +76,8 @@ double MonteCarloPricer::price(const ContinuousTimeOptionBase& option,
     double mean = total / nScenarios;
 
     // Discount the expected payoff from maturity back to the model date.
-    double r = bsm.riskFreeRate;
-    double T = option.getMaturity() - bsm.date;
+    double r = bsm.getRiskFreeRate();
+    double T = option.getMaturity() - bsm.getDate();
 
     return std::exp(-r * T) * mean;
 }

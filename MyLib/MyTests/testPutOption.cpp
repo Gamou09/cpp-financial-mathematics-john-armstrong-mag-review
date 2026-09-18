@@ -51,10 +51,10 @@ static void testPutOptionPrice(){
     putOption.setMaturity(2.0) ;
     
     BlackScholesModel bsm ;
-    bsm.date = 1.0 ;
-    bsm.volatility = 0.1 ;
-    bsm.riskFreeRate = 0.05 ;
-    bsm.stockPrice = 100 ;
+    bsm.setDate(1.0) ;
+    bsm.setVolatility(0.1)  ;
+    bsm.setRiskFreeRate(0.05) ;
+    bsm.setStockPrice(100.0)  ;
     
     double price = putOption.price(bsm) ;
     ASSERT_APPROX_EQUAL(price, 3.9252, 1e-2) ;

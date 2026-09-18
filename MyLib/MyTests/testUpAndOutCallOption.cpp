@@ -92,10 +92,10 @@ static void testUpAndOutCallOptionPrice() {
 
     BlackScholesModel bsm;
 
-    bsm.date = 0.0;
-    bsm.stockPrice = 100.0;
-    bsm.riskFreeRate = 0.05;
-    bsm.volatility = 0.20;
+    bsm.setDate(0.0) ;
+    bsm.setStockPrice(100.0);
+    bsm.setRiskFreeRate(0.05);
+    bsm.setVolatility(0.20) ;
 
     // Barrier = 0 means every positive simulated path
     // is immediately knocked out.

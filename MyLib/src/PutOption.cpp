@@ -34,11 +34,11 @@ double PutOption::payoff(const std::vector<double>& stockPrices) const {
 // e.g. here in particular, we want to use usual black and Scholes than Monte Carlo
 double PutOption::price(const BlackScholesModel& bsm) const {
 
-    const double S = bsm.stockPrice;
+    const double S = bsm.getStockPrice();
     const double K = getStrike();
-    const double sigma = bsm.volatility;
-    const double r = bsm.riskFreeRate;
-    const double T = getMaturity() - bsm.date;
+    const double sigma = bsm.getVolatility();
+    const double r = bsm.getRiskFreeRate();
+    const double T = getMaturity() - bsm.getDate();
 
     const double numerator =
         std::log(S / K) + (r + 0.5 * sigma * sigma) * T;

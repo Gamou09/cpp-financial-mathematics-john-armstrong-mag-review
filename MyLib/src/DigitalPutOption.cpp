@@ -17,24 +17,24 @@ double DigitalPutOption::payoff(double stockAtMaturity) const
 // analytical Black-Scholes price
 double DigitalPutOption::price(const BlackScholesModel& bsm) const
 {
-    double timeToMaturity = getMaturity() - bsm.date;
+    double timeToMaturity = getMaturity() - bsm.getDate();
 
     double d2 =
         (
-            std::log(bsm.stockPrice / getStrike())
+            std::log(bsm.getStockPrice() / getStrike())
             +
             (
-                bsm.riskFreeRate
-                - 0.5 * bsm.volatility * bsm.volatility
+                bsm.getRiskFreeRate()
+                - 0.5 * bsm.getVolatility() * bsm.getVolatility()
             )
             * timeToMaturity
         )
         /
         (
-            bsm.volatility
+            bsm.getVolatility()
             * std::sqrt(timeToMaturity)
         );
 
-    return std::exp(-bsm.riskFreeRate * timeToMaturity)
+    return std::exp(-bsm.getRiskFreeRate() * timeToMaturity)
            * normcdf(-d2);
 }

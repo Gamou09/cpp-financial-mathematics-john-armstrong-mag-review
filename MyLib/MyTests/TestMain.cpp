@@ -9,7 +9,8 @@
 #include "stdafx.h"
 #include "TestFunctions.h"
 
-#include "AsianCallOption.hpp"
+#include "BlackScholesModel.hpp"
+#include "Stock.hpp"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ int main()
 {
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
-    
+        
     std::cout << "Running the tests with the new framework...\n" << std::endl;
     
     // Test BlackScholesModel class
@@ -47,7 +48,7 @@ int main()
     testCallCountedSin() ;
     
     // Excercise 12.9.2
-    testAsianCallOption () ; 
+    testAsianCallOption () ;
     
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     
