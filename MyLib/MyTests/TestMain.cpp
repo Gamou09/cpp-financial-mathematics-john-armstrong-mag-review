@@ -11,6 +11,8 @@
 
 #include "BlackScholesModel.hpp"
 #include "Stock.hpp"
+#include "Portfolio.hpp"
+#include "PortfolioImpl.hpp"
 
 using namespace std;
 
@@ -18,7 +20,9 @@ int main()
 {
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
-        
+    
+    PortfolioImpl p ; 
+            
     std::cout << "Running the tests with the new framework...\n" << std::endl;
     
     // Test BlackScholesModel class
@@ -49,6 +53,9 @@ int main()
     
     // Excercise 12.9.2
     testAsianCallOption () ;
+    
+    // Chap 13.3 - testing
+    testPutCallParityWrapper(); 
     
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     

@@ -32,6 +32,9 @@ void testUpAndOutCallOption() ;
 
 void testCallCountedSin() ;
 
-void testAsianCallOption() ; 
+void testAsianCallOption() ;
+
+// chap 13
+void testPutCallParityWrapper() ;
 
 #endif /* TestFunctions_h */
