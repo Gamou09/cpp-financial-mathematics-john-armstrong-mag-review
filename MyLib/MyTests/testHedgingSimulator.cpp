@@ -35,8 +35,8 @@ static void testPlotDeltaHedgingHistogram(){
     rng("default") ;
     HedgingSimulator simulator ;
     
-    simulator.setNSteps(10000) ;
-    vector<double> result = simulator.runSimulations(100000) ;
+    simulator.setNSteps(252) ;
+    vector<double> result = simulator.runSimulations(10000) ;
     
     hist("output/html/deltaHedgingPNL.html", result, 20);
 }
@@ -45,9 +45,9 @@ void testHedingSimulator() {
     
     std::cout << "\n.... Start of testHedingSimulator ....\n" << std::endl;
     
-    TEST( testHedgingMeanPayoff ) ;
-    
     testPlotDeltaHedgingHistogram() ;
+    
+    TEST( testHedgingMeanPayoff ) ;
     
     std::cout << "\n ......................................... \n" << std::endl;
 }
