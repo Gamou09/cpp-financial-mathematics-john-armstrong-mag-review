@@ -35,6 +35,9 @@ public:
 
     // Call-specific payoff at maturity.
     double payoff(double stockAtMaturity) const override;
+    
+    // compute call option delta
+    double delta ( const BlackScholesModel& bsm ) const ; 
 };
 
 #endif /* CallOption_hpp */

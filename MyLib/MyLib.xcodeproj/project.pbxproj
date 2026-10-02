@@ -50,6 +50,10 @@
 		C3FF24B9306C92BF006AC486 /* Portfolio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF24B6306C92BF006AC486 /* Portfolio.hpp */; };
 		C3FF24BC306C964B006AC486 /* PortfolioImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF24BA306C964B006AC486 /* PortfolioImpl.hpp */; };
 		C3FF24BD306C964B006AC486 /* PortfolioImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24BB306C964B006AC486 /* PortfolioImpl.cpp */; };
+		C3FF24C2306F1A80006AC486 /* HedgingSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24C1306F1A80006AC486 /* HedgingSimulator.cpp */; };
+		C3FF24C3306F1A80006AC486 /* HedgingSimulator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF24C0306F1A80006AC486 /* HedgingSimulator.hpp */; };
+		C3FF24CA306F34A7006AC486 /* histogramChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24C9306F34A7006AC486 /* histogramChart.cpp */; };
+		C3FF24CB306F34A7006AC486 /* histogramChart.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF24C8306F34A7006AC486 /* histogramChart.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +158,10 @@
 		C3FF24B6306C92BF006AC486 /* Portfolio.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Portfolio.hpp; sourceTree = "<group>"; };
 		C3FF24BA306C964B006AC486 /* PortfolioImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PortfolioImpl.hpp; sourceTree = "<group>"; };
 		C3FF24BB306C964B006AC486 /* PortfolioImpl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PortfolioImpl.cpp; sourceTree = "<group>"; };
+		C3FF24C0306F1A80006AC486 /* HedgingSimulator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HedgingSimulator.hpp; sourceTree = "<group>"; };
+		C3FF24C1306F1A80006AC486 /* HedgingSimulator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HedgingSimulator.cpp; sourceTree = "<group>"; };
+		C3FF24C8306F34A7006AC486 /* histogramChart.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = histogramChart.hpp; sourceTree = "<group>"; };
+		C3FF24C9306F34A7006AC486 /* histogramChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = histogramChart.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -236,6 +244,7 @@
 		C356BB5C304CA81200850E27 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF24A3305B47FE006AC486 /* AsianCallOption.cpp */,
 				C356BB4B304CA81200850E27 /* BlackScholesModel.cpp */,
 				C356BB4C304CA81200850E27 /* CallOption.cpp */,
 				C356BB4D304CA81200850E27 /* chap_7_class_piechart_worldweb.cpp */,
@@ -243,25 +252,26 @@
 				C356BB4F304CA81200850E27 /* chap_7_classes_ofstream_strings.cpp */,
 				C356BB50304CA81200850E27 /* chap_7_solutions_to_exercises.cpp */,
 				C356BB51304CA81200850E27 /* charts.cpp */,
-				C356BB52304CA81200850E27 /* derivatives.cpp */,
-				C3FF24A3305B47FE006AC486 /* AsianCallOption.cpp */,
-				C356BB53304CA81200850E27 /* geometry.cpp */,
-				C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */,
-				C356BB54304CA81200850E27 /* LineChart.cpp */,
-				C356BC5C3054CFCC00850E27 /* Integral.cpp */,
-				C3FF24AF305D1A8E006AC486 /* Stock.cpp */,
-				C356BC233054BEA200850E27 /* DigitalPutOption.cpp */,
-				C356BB56304CA81200850E27 /* matlib.cpp */,
-				C3FF24B3305D1F0C006AC486 /* ZeroCouponBond.cpp */,
-				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
-				C356BC603054D3B600850E27 /* SinFunction.cpp */,
-				C356BB58304CA81200850E27 /* PieChart.cpp */,
-				C356BC1B3052079900850E27 /* DigitalCallOption.cpp */,
 				C3FF249C3059FF27006AC486 /* ContinuousTimeOptionBase.cpp */,
-				C356BB5B304CA81200850E27 /* testing.cpp */,
+				C356BC1B3052079900850E27 /* DigitalCallOption.cpp */,
+				C356BC233054BEA200850E27 /* DigitalPutOption.cpp */,
+				C356BB52304CA81200850E27 /* derivatives.cpp */,
+				C3FF24C1306F1A80006AC486 /* HedgingSimulator.cpp */,
+				C3FF24C9306F34A7006AC486 /* histogramChart.cpp */,
+				C356BC5C3054CFCC00850E27 /* Integral.cpp */,
+				C356BB53304CA81200850E27 /* geometry.cpp */,
+				C356BB54304CA81200850E27 /* LineChart.cpp */,
+				C356BB56304CA81200850E27 /* matlib.cpp */,
+				C356BB57304CA81200850E27 /* MonteCarloPricer.cpp */,
+				C356BB58304CA81200850E27 /* PieChart.cpp */,
 				C356BB59304CA81200850E27 /* Polynomial.cpp */,
 				C3FF24BB306C964B006AC486 /* PortfolioImpl.cpp */,
 				C356BB5A304CA81200850E27 /* PutOption.cpp */,
+				C356BC603054D3B600850E27 /* SinFunction.cpp */,
+				C3FF24AF305D1A8E006AC486 /* Stock.cpp */,
+				C356BB5B304CA81200850E27 /* testing.cpp */,
+				C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */,
+				C3FF24B3305D1F0C006AC486 /* ZeroCouponBond.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -269,17 +279,17 @@
 		C356BB81304CA87E00850E27 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF24A2305B47FE006AC486 /* AsianCallOption.hpp */,
 				C356BB6F304CA87E00850E27 /* BlackScholesModel.hpp */,
 				C356BB70304CA87E00850E27 /* CallOption.hpp */,
 				C356BB71304CA87E00850E27 /* chap_7_class_piechart_worldweb.hpp */,
 				C356BB72304CA87E00850E27 /* chap_7_classes.hpp */,
 				C356BB73304CA87E00850E27 /* chap_7_classes_ofstream_strings.hpp */,
 				C356BC1A3052079900850E27 /* DigitalCallOption.hpp */,
-				C3FF24A2305B47FE006AC486 /* AsianCallOption.hpp */,
 				C356BC5B3054CFCC00850E27 /* Integral.hpp */,
-				C3FF24B2305D1F0C006AC486 /* ZeroCouponBond.hpp */,
-				C356BC2C3054CE3400850E27 /* RealFunction.h */,
+				C3FF24C8306F34A7006AC486 /* histogramChart.hpp */,
 				C356BC223054BEA200850E27 /* DigitalPutOption.hpp */,
+				C3FF24C0306F1A80006AC486 /* HedgingSimulator.hpp */,
 				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
 				C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */,
 				C3FF24033059D9B4006AC486 /* ContinuousTimeOption.h */,
@@ -298,9 +308,11 @@
 				C3FF24BA306C964B006AC486 /* PortfolioImpl.hpp */,
 				C3FF24AC305B5B67006AC486 /* Priceable.h */,
 				C356BB7E304CA87E00850E27 /* PutOption.hpp */,
+				C356BC2C3054CE3400850E27 /* RealFunction.h */,
 				C3FF24AE305D1A8E006AC486 /* Stock.hpp */,
 				C356BC5F3054D3B600850E27 /* SinFunction.hpp */,
 				C356BB7F304CA87E00850E27 /* stdafx.h */,
+				C3FF24B2305D1F0C006AC486 /* ZeroCouponBond.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 			files = (
 				C3FF24A4305B47FE006AC486 /* AsianCallOption.hpp in Headers */,
 				C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */,
+				C3FF24C3306F1A80006AC486 /* HedgingSimulator.hpp in Headers */,
 				C3FF23C93058BDC4006AC486 /* UpAndOutCallOption.hpp in Headers */,
 				C3FF24B5305D1F0C006AC486 /* ZeroCouponBond.hpp in Headers */,
 				C3FF24B9306C92BF006AC486 /* Portfolio.hpp in Headers */,
@@ -352,6 +365,7 @@
 				C3FF24063059DBE9006AC486 /* ContinuousTimeOptionBase.h in Headers */,
 				C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */,
 				C3FF24AD305B5B67006AC486 /* Priceable.h in Headers */,
+				C3FF24CB306F34A7006AC486 /* histogramChart.hpp in Headers */,
 				C356BC2D3054CE3400850E27 /* RealFunction.h in Headers */,
 				C356BC5E3054CFCC00850E27 /* Integral.hpp in Headers */,
 			);
@@ -494,9 +508,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FF24CA306F34A7006AC486 /* histogramChart.cpp in Sources */,
 				C356BBF9304D7A7400850E27 /* BlackScholesModel.cpp in Sources */,
 				C356BBFA304D7A7400850E27 /* CallOption.cpp in Sources */,
 				C356BBFB304D7A7400850E27 /* chap_7_class_piechart_worldweb.cpp in Sources */,
+				C3FF24C2306F1A80006AC486 /* HedgingSimulator.cpp in Sources */,
 				C356BBFC304D7A7400850E27 /* chap_7_classes.cpp in Sources */,
 				C356BC243054BEA200850E27 /* DigitalPutOption.cpp in Sources */,
 				C356BBFD304D7A7400850E27 /* chap_7_classes_ofstream_strings.cpp in Sources */,

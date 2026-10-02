@@ -14,6 +14,11 @@
 #include "Portfolio.hpp"
 #include "PortfolioImpl.hpp"
 
+#include "HedgingSimulator.hpp"
+
+#include <filesystem>  // std::filesystem::current_path.
+#include <iostream>    // std::cout.
+
 using namespace std;
 
 int main()
@@ -21,7 +26,8 @@ int main()
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
     
-    PortfolioImpl p ; 
+
+    std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
             
     std::cout << "Running the tests with the new framework...\n" << std::endl;
     
@@ -55,7 +61,10 @@ int main()
     testAsianCallOption () ;
     
     // Chap 13.3 - testing
-    testPutCallParityWrapper(); 
+    testPutCallParityWrapper();
+    
+    // chap 14.3
+    testHedingSimulator(); 
     
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     

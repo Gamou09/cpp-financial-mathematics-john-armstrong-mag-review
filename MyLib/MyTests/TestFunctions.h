@@ -37,4 +37,7 @@ void testAsianCallOption() ;
 // chap 13
 void testPutCallParityWrapper() ;
 
+// chap 14
+void testHedingSimulator() ;
+
 #endif /* TestFunctions_h */
