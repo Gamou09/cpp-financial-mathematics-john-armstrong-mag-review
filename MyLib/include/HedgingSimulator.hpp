@@ -46,6 +46,13 @@ private:
     /* run a simulation and compute the profit and loss */
     double runSimulation() const;
     
+    /*
+     Function overloading to keep the current architecture
+     Allow user to specific the number of hedging steps
+     usefull for Ex 14.4.1
+     */
+    double runSimulation(int steps) const;
+    
     /* How much should we charge the constomer */
     double chooseCharge( double stockPrice) const ;
     
@@ -80,6 +87,9 @@ public:
     
     /* Runs a number of simulations and returns a vector of the profit and loss */
     std::vector<double> runSimulations( int nSimulations) const ;
+    
+    /* Mean Absolute PnL function */
+    double meanAbsolutePnL(int steps, int nScenarios) const;
     
 } ;
 

@@ -11,19 +11,19 @@
 
 using namespace std ;
 
-double HedgingSimulator::runSimulation() const {
+double HedgingSimulator::runSimulation(int steps) const {
     
     double T = toHedge->getMaturity() ;
     double S0 = simulationModel->getStockPrice() ;
     
-    vector<double> pricePath = simulationModel->generatePricePath(T, nSteps) ;
+    vector<double> pricePath = simulationModel->generatePricePath(T, steps) ;
     
-    double dt = T / nSteps ;
+    double dt = T / steps ;
     double charge = chooseCharge(S0) ;
     double stockQuantity = selectStockQuantity(0, S0) ;
     double bankBalance = charge - stockQuantity*S0 ;
     
-    for (int i = 0; i < nSteps - 1 ; i++) {
+    for (int i = 0; i < steps - 1 ; i++) {
         double balanceWithInterest = bankBalance*exp(simulationModel->getRiskFreeRate()*dt) ;
         
         double S = pricePath[i] ;
@@ -38,7 +38,7 @@ double HedgingSimulator::runSimulation() const {
     
     double balanceWithInterest = bankBalance*exp(simulationModel->getRiskFreeRate()*dt) ;
     
-    double S = pricePath[nSteps - 1] ;
+    double S = pricePath[steps - 1] ;
     double stockValue = stockQuantity*S ;
     double payout = toHedge->payoff(S) ;
     
@@ -53,6 +53,12 @@ vector<double> HedgingSimulator::runSimulations( int nSimulations) const{
     }
     
     return  ret ;
+    
+}
+
+double HedgingSimulator::runSimulation() const{
+    
+    return runSimulation(nSteps);
     
 }
 
@@ -100,4 +106,19 @@ double HedgingSimulator::chooseCharge(double stockPrice) const {
     pm.setStockPrice(stockPrice) ;
     
     return toHedge->price(pm);
+}
+
+double HedgingSimulator::meanAbsolutePnL(int steps, int nScenarios) const{
+    
+    double total = 0.0;
+
+    for (int i = 0; i < nScenarios; i++) {
+
+        double pnl = runSimulation(steps);
+
+        total += abs(pnl);
+    }
+
+    return total / nScenarios;
+    
 }

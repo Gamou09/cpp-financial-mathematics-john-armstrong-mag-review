@@ -416,20 +416,33 @@ void test_randomuniform_v2() {
 
 // 7.7.6
 vector<double> randn(const int n = 1) {
-    
-    vector<double> res;
-    // Without reserve(n), the vector may reallocate memory multiple times as it grows.
-    // With reserve(n), memory is allocated once, improving performance and efficiency
-    // especially for large n.
-    res.reserve(n);
-    
-    // Random number generator and distribution
-    random_device rd;  // Seed
-    mt19937 gen(rd()); // Mersenne Twister engine
-    // mt19937 gen(42); // Replaces random_device with fixed seed
-    
-    normal_distribution <> generator{0, 1.0}; // mean 0 and std 1
 
+    vector<double> res;
+
+    // Reserve memory for n values in advance.
+    // This avoids repeated memory reallocations while push_back()
+    // adds random numbers to the vector.
+    res.reserve(n);
+
+    // Random-number engine.
+    //
+    // static means that the engine is created only once and keeps
+    // its internal state between calls to randn().
+    //
+    // Using a fixed seed such as 42 makes the sequence reproducible:
+    // every time the program is restarted, the same sequence of
+    // pseudo-random numbers is generated.
+    //
+    // Importantly, because gen is static, the sequence does NOT restart
+    // from the beginning every time randn() is called.
+    static mt19937 gen(42);
+
+    // Standard normal distribution:
+    // mean = 0
+    // standard deviation = 1
+    normal_distribution<double> generator(0.0, 1.0);
+
+    // Generate n independent standard normal random variables.
     for (int i = 0; i < n; ++i) {
         res.push_back(generator(gen));
     }
