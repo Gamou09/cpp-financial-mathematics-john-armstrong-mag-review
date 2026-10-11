@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC180DBD1D3E85E3009AE6D4 /* BlackScholesModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D901D3E85E3009AE6D4 /* BlackScholesModel.cpp */; };
+		AC180DBE1D3E85E3009AE6D4 /* CallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D921D3E85E3009AE6D4 /* CallOption.cpp */; };
+		AC180DBF1D3E85E3009AE6D4 /* ContinuousTimeOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D951D3E85E3009AE6D4 /* ContinuousTimeOption.cpp */; };
+		AC180DC01D3E85E3009AE6D4 /* ContinuousTimeOptionBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D971D3E85E3009AE6D4 /* ContinuousTimeOptionBase.cpp */; };
+		AC180DC11D3E85E3009AE6D4 /* DownAndOutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D991D3E85E3009AE6D4 /* DownAndOutOption.cpp */; };
+		AC180DC21D3E85E3009AE6D4 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D9B1D3E85E3009AE6D4 /* geometry.cpp */; };
+		AC180DC31D3E85E3009AE6D4 /* HedgingSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D9D1D3E85E3009AE6D4 /* HedgingSimulator.cpp */; };
+		AC180DC41D3E85E3009AE6D4 /* Histogram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180D9F1D3E85E3009AE6D4 /* Histogram.cpp */; };
+		AC180DC51D3E85E3009AE6D4 /* KnockoutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DA11D3E85E3009AE6D4 /* KnockoutOption.cpp */; };
+		AC180DC61D3E85E3009AE6D4 /* LineChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DA31D3E85E3009AE6D4 /* LineChart.cpp */; };
+		AC180DC71D3E85E3009AE6D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DA51D3E85E3009AE6D4 /* main.cpp */; };
+		AC180DC81D3E85E3009AE6D4 /* matlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DA61D3E85E3009AE6D4 /* matlib.cpp */; };
+		AC180DC91D3E85E3009AE6D4 /* MonteCarloPricer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DA81D3E85E3009AE6D4 /* MonteCarloPricer.cpp */; };
+		AC180DCA1D3E85E3009AE6D4 /* PathIndependentOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DAA1D3E85E3009AE6D4 /* PathIndependentOption.cpp */; };
+		AC180DCB1D3E85E3009AE6D4 /* PieChart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DAC1D3E85E3009AE6D4 /* PieChart.cpp */; };
+		AC180DCC1D3E85E3009AE6D4 /* Portfolio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DAE1D3E85E3009AE6D4 /* Portfolio.cpp */; };
+		AC180DCD1D3E85E3009AE6D4 /* Priceable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DB01D3E85E3009AE6D4 /* Priceable.cpp */; };
+		AC180DCE1D3E85E3009AE6D4 /* PutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DB21D3E85E3009AE6D4 /* PutOption.cpp */; };
+		AC180DCF1D3E85E3009AE6D4 /* RealFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DB41D3E85E3009AE6D4 /* RealFunction.cpp */; };
+		AC180DD01D3E85E3009AE6D4 /* testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DB71D3E85E3009AE6D4 /* testing.cpp */; };
+		AC180DD11D3E85E3009AE6D4 /* textfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DB91D3E85E3009AE6D4 /* textfunctions.cpp */; };
+		AC180DD21D3E85E3009AE6D4 /* UpAndOutOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC180DBB1D3E85E3009AE6D4 /* UpAndOutOption.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC5F9B621D3E7592003689AA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AC180D901D3E85E3009AE6D4 /* BlackScholesModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackScholesModel.cpp; sourceTree = "<group>"; };
+		AC180D911D3E85E3009AE6D4 /* BlackScholesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackScholesModel.h; sourceTree = "<group>"; };
+		AC180D921D3E85E3009AE6D4 /* CallOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CallOption.cpp; sourceTree = "<group>"; };
+		AC180D931D3E85E3009AE6D4 /* CallOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOption.h; sourceTree = "<group>"; };
+		AC180D941D3E85E3009AE6D4 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		AC180D951D3E85E3009AE6D4 /* ContinuousTimeOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContinuousTimeOption.cpp; sourceTree = "<group>"; };
+		AC180D961D3E85E3009AE6D4 /* ContinuousTimeOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinuousTimeOption.h; sourceTree = "<group>"; };
+		AC180D971D3E85E3009AE6D4 /* ContinuousTimeOptionBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContinuousTimeOptionBase.cpp; sourceTree = "<group>"; };
+		AC180D981D3E85E3009AE6D4 /* ContinuousTimeOptionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinuousTimeOptionBase.h; sourceTree = "<group>"; };
+		AC180D991D3E85E3009AE6D4 /* DownAndOutOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DownAndOutOption.cpp; sourceTree = "<group>"; };
+		AC180D9A1D3E85E3009AE6D4 /* DownAndOutOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownAndOutOption.h; sourceTree = "<group>"; };
+		AC180D9B1D3E85E3009AE6D4 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		AC180D9C1D3E85E3009AE6D4 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
+		AC180D9D1D3E85E3009AE6D4 /* HedgingSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HedgingSimulator.cpp; sourceTree = "<group>"; };
+		AC180D9E1D3E85E3009AE6D4 /* HedgingSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HedgingSimulator.h; sourceTree = "<group>"; };
+		AC180D9F1D3E85E3009AE6D4 /* Histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Histogram.cpp; sourceTree = "<group>"; };
+		AC180DA01D3E85E3009AE6D4 /* Histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
+		AC180DA11D3E85E3009AE6D4 /* KnockoutOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KnockoutOption.cpp; sourceTree = "<group>"; };
+		AC180DA21D3E85E3009AE6D4 /* KnockoutOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnockoutOption.h; sourceTree = "<group>"; };
+		AC180DA31D3E85E3009AE6D4 /* LineChart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LineChart.cpp; sourceTree = "<group>"; };
+		AC180DA41D3E85E3009AE6D4 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
+		AC180DA51D3E85E3009AE6D4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AC180DA61D3E85E3009AE6D4 /* matlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matlib.cpp; sourceTree = "<group>"; };
+		AC180DA71D3E85E3009AE6D4 /* matlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matlib.h; sourceTree = "<group>"; };
+		AC180DA81D3E85E3009AE6D4 /* MonteCarloPricer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonteCarloPricer.cpp; sourceTree = "<group>"; };
+		AC180DA91D3E85E3009AE6D4 /* MonteCarloPricer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonteCarloPricer.h; sourceTree = "<group>"; };
+		AC180DAA1D3E85E3009AE6D4 /* PathIndependentOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathIndependentOption.cpp; sourceTree = "<group>"; };
+		AC180DAB1D3E85E3009AE6D4 /* PathIndependentOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathIndependentOption.h; sourceTree = "<group>"; };
+		AC180DAC1D3E85E3009AE6D4 /* PieChart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PieChart.cpp; sourceTree = "<group>"; };
+		AC180DAD1D3E85E3009AE6D4 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		AC180DAE1D3E85E3009AE6D4 /* Portfolio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Portfolio.cpp; sourceTree = "<group>"; };
+		AC180DAF1D3E85E3009AE6D4 /* Portfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Portfolio.h; sourceTree = "<group>"; };
+		AC180DB01D3E85E3009AE6D4 /* Priceable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Priceable.cpp; sourceTree = "<group>"; };
+		AC180DB11D3E85E3009AE6D4 /* Priceable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Priceable.h; sourceTree = "<group>"; };
+		AC180DB21D3E85E3009AE6D4 /* PutOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PutOption.cpp; sourceTree = "<group>"; };
+		AC180DB31D3E85E3009AE6D4 /* PutOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutOption.h; sourceTree = "<group>"; };
+		AC180DB41D3E85E3009AE6D4 /* RealFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealFunction.cpp; sourceTree = "<group>"; };
+		AC180DB51D3E85E3009AE6D4 /* RealFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealFunction.h; sourceTree = "<group>"; };
+		AC180DB61D3E85E3009AE6D4 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		AC180DB71D3E85E3009AE6D4 /* testing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testing.cpp; sourceTree = "<group>"; };
+		AC180DB81D3E85E3009AE6D4 /* testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testing.h; sourceTree = "<group>"; };
+		AC180DB91D3E85E3009AE6D4 /* textfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textfunctions.cpp; sourceTree = "<group>"; };
+		AC180DBA1D3E85E3009AE6D4 /* textfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textfunctions.h; sourceTree = "<group>"; };
+		AC180DBB1D3E85E3009AE6D4 /* UpAndOutOption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UpAndOutOption.cpp; sourceTree = "<group>"; };
+		AC180DBC1D3E85E3009AE6D4 /* UpAndOutOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpAndOutOption.h; sourceTree = "<group>"; };
+		AC5F9B641D3E7592003689AA /* FMLib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FMLib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5F9B611D3E7592003689AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC5F9B5B1D3E7592003689AA = {
+			isa = PBXGroup;
+			children = (
+				AC180D901D3E85E3009AE6D4 /* BlackScholesModel.cpp */,
+				AC180D911D3E85E3009AE6D4 /* BlackScholesModel.h */,
+				AC180D921D3E85E3009AE6D4 /* CallOption.cpp */,
+				AC180D931D3E85E3009AE6D4 /* CallOption.h */,
+				AC180D941D3E85E3009AE6D4 /* Chart.h */,
+				AC180D951D3E85E3009AE6D4 /* ContinuousTimeOption.cpp */,
+				AC180D961D3E85E3009AE6D4 /* ContinuousTimeOption.h */,
+				AC180D971D3E85E3009AE6D4 /* ContinuousTimeOptionBase.cpp */,
+				AC180D981D3E85E3009AE6D4 /* ContinuousTimeOptionBase.h */,
+				AC180D991D3E85E3009AE6D4 /* DownAndOutOption.cpp */,
+				AC180D9A1D3E85E3009AE6D4 /* DownAndOutOption.h */,
+				AC180D9B1D3E85E3009AE6D4 /* geometry.cpp */,
+				AC180D9C1D3E85E3009AE6D4 /* geometry.h */,
+				AC180D9D1D3E85E3009AE6D4 /* HedgingSimulator.cpp */,
+				AC180D9E1D3E85E3009AE6D4 /* HedgingSimulator.h */,
+				AC180D9F1D3E85E3009AE6D4 /* Histogram.cpp */,
+				AC180DA01D3E85E3009AE6D4 /* Histogram.h */,
+				AC180DA11D3E85E3009AE6D4 /* KnockoutOption.cpp */,
+				AC180DA21D3E85E3009AE6D4 /* KnockoutOption.h */,
+				AC180DA31D3E85E3009AE6D4 /* LineChart.cpp */,
+				AC180DA41D3E85E3009AE6D4 /* LineChart.h */,
+				AC180DA51D3E85E3009AE6D4 /* main.cpp */,
+				AC180DA61D3E85E3009AE6D4 /* matlib.cpp */,
+				AC180DA71D3E85E3009AE6D4 /* matlib.h */,
+				AC180DA81D3E85E3009AE6D4 /* MonteCarloPricer.cpp */,
+				AC180DA91D3E85E3009AE6D4 /* MonteCarloPricer.h */,
+				AC180DAA1D3E85E3009AE6D4 /* PathIndependentOption.cpp */,
+				AC180DAB1D3E85E3009AE6D4 /* PathIndependentOption.h */,
+				AC180DAC1D3E85E3009AE6D4 /* PieChart.cpp */,
+				AC180DAD1D3E85E3009AE6D4 /* PieChart.h */,
+				AC180DAE1D3E85E3009AE6D4 /* Portfolio.cpp */,
+				AC180DAF1D3E85E3009AE6D4 /* Portfolio.h */,
+				AC180DB01D3E85E3009AE6D4 /* Priceable.cpp */,
+				AC180DB11D3E85E3009AE6D4 /* Priceable.h */,
+				AC180DB21D3E85E3009AE6D4 /* PutOption.cpp */,
+				AC180DB31D3E85E3009AE6D4 /* PutOption.h */,
+				AC180DB41D3E85E3009AE6D4 /* RealFunction.cpp */,
+				AC180DB51D3E85E3009AE6D4 /* RealFunction.h */,
+				AC180DB61D3E85E3009AE6D4 /* stdafx.h */,
+				AC180DB71D3E85E3009AE6D4 /* testing.cpp */,
+				AC180DB81D3E85E3009AE6D4 /* testing.h */,
+				AC180DB91D3E85E3009AE6D4 /* textfunctions.cpp */,
+				AC180DBA1D3E85E3009AE6D4 /* textfunctions.h */,
+				AC180DBB1D3E85E3009AE6D4 /* UpAndOutOption.cpp */,
+				AC180DBC1D3E85E3009AE6D4 /* UpAndOutOption.h */,
+				AC5F9B661D3E7592003689AA /* FMLib */,
+				AC5F9B651D3E7592003689AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5F9B651D3E7592003689AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5F9B641D3E7592003689AA /* FMLib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC5F9B661D3E7592003689AA /* FMLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FMLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC5F9B631D3E7592003689AA /* FMLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5F9B6B1D3E7592003689AA /* Build configuration list for PBXNativeTarget "FMLib" */;
+			buildPhases = (
+				AC5F9B601D3E7592003689AA /* Sources */,
+				AC5F9B611D3E7592003689AA /* Frameworks */,
+				AC5F9B621D3E7592003689AA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMLib;
+			productName = FMLib;
+			productReference = AC5F9B641D3E7592003689AA /* FMLib */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC5F9B5C1D3E7592003689AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "C++ for financial mathematics";
+				TargetAttributes = {
+					AC5F9B631D3E7592003689AA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AC5F9B5F1D3E7592003689AA /* Build configuration list for PBXProject "FMLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AC5F9B5B1D3E7592003689AA;
+			productRefGroup = AC5F9B651D3E7592003689AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5F9B631D3E7592003689AA /* FMLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5F9B601D3E7592003689AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC180DC81D3E85E3009AE6D4 /* matlib.cpp in Sources */,
+				AC180DC51D3E85E3009AE6D4 /* KnockoutOption.cpp in Sources */,
+				AC180DD01D3E85E3009AE6D4 /* testing.cpp in Sources */,
+				AC180DC91D3E85E3009AE6D4 /* MonteCarloPricer.cpp in Sources */,
+				AC180DBE1D3E85E3009AE6D4 /* CallOption.cpp in Sources */,
+				AC180DCD1D3E85E3009AE6D4 /* Priceable.cpp in Sources */,
+				AC180DBF1D3E85E3009AE6D4 /* ContinuousTimeOption.cpp in Sources */,
+				AC180DBD1D3E85E3009AE6D4 /* BlackScholesModel.cpp in Sources */,
+				AC180DC71D3E85E3009AE6D4 /* main.cpp in Sources */,
+				AC180DC31D3E85E3009AE6D4 /* HedgingSimulator.cpp in Sources */,
+				AC180DC41D3E85E3009AE6D4 /* Histogram.cpp in Sources */,
+				AC180DC01D3E85E3009AE6D4 /* ContinuousTimeOptionBase.cpp in Sources */,
+				AC180DCA1D3E85E3009AE6D4 /* PathIndependentOption.cpp in Sources */,
+				AC180DCF1D3E85E3009AE6D4 /* RealFunction.cpp in Sources */,
+				AC180DCE1D3E85E3009AE6D4 /* PutOption.cpp in Sources */,
+				AC180DD11D3E85E3009AE6D4 /* textfunctions.cpp in Sources */,
+				AC180DD21D3E85E3009AE6D4 /* UpAndOutOption.cpp in Sources */,
+				AC180DC11D3E85E3009AE6D4 /* DownAndOutOption.cpp in Sources */,
+				AC180DCC1D3E85E3009AE6D4 /* Portfolio.cpp in Sources */,
+				AC180DC61D3E85E3009AE6D4 /* LineChart.cpp in Sources */,
+				AC180DCB1D3E85E3009AE6D4 /* PieChart.cpp in Sources */,
+				AC180DC21D3E85E3009AE6D4 /* geometry.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC5F9B691D3E7592003689AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AC5F9B6A1D3E7592003689AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AC5F9B6C1D3E7592003689AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wno-inconsistent-missing-override",
+					"-Wno-unreachable-code",
+				);
+			};
+			name = Debug;
+		};
+		AC5F9B6D1D3E7592003689AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wno-inconsistent-missing-override",
+					"-Wno-unreachable-code",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5F9B5F1D3E7592003689AA /* Build configuration list for PBXProject "FMLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5F9B691D3E7592003689AA /* Debug */,
+				AC5F9B6A1D3E7592003689AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5F9B6B1D3E7592003689AA /* Build configuration list for PBXNativeTarget "FMLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5F9B6C1D3E7592003689AA /* Debug */,
+				AC5F9B6D1D3E7592003689AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC5F9B5C1D3E7592003689AA /* Project object */;
+}
