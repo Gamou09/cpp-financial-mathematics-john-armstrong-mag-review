@@ -34,6 +34,8 @@
 		C356BC5E3054CFCC00850E27 /* Integral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5B3054CFCC00850E27 /* Integral.hpp */; };
 		C356BC613054D3B600850E27 /* SinFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C356BC603054D3B600850E27 /* SinFunction.cpp */; };
 		C356BC623054D3B600850E27 /* SinFunction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C356BC5F3054D3B600850E27 /* SinFunction.hpp */; };
+		C3BAB524307DA01E00FEC430 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3BAB523307DA01E00FEC430 /* Matrix.cpp */; };
+		C3BAB525307DA01E00FEC430 /* Matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3BAB522307DA01E00FEC430 /* Matrix.hpp */; };
 		C3FF23C93058BDC4006AC486 /* UpAndOutCallOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */; };
 		C3FF23CA3058BDC4006AC486 /* UpAndOutCallOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */; };
 		C3FF23CD3058C089006AC486 /* PathDependentOption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FF23CC3058C089006AC486 /* PathDependentOption.hpp */; };
@@ -142,6 +144,8 @@
 		C356BC5C3054CFCC00850E27 /* Integral.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Integral.cpp; sourceTree = "<group>"; };
 		C356BC5F3054D3B600850E27 /* SinFunction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SinFunction.hpp; sourceTree = "<group>"; };
 		C356BC603054D3B600850E27 /* SinFunction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SinFunction.cpp; sourceTree = "<group>"; };
+		C3BAB522307DA01E00FEC430 /* Matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
+		C3BAB523307DA01E00FEC430 /* Matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
 		C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UpAndOutCallOption.hpp; sourceTree = "<group>"; };
 		C3FF23C83058BDC4006AC486 /* UpAndOutCallOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UpAndOutCallOption.cpp; sourceTree = "<group>"; };
 		C3FF23CC3058C089006AC486 /* PathDependentOption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PathDependentOption.hpp; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				C356BC223054BEA200850E27 /* DigitalPutOption.hpp */,
 				C3FF24C0306F1A80006AC486 /* HedgingSimulator.hpp */,
 				C356BB74304CA87E00850E27 /* chap_7_solutions_to_exercises.hpp */,
+				C3BAB522307DA01E00FEC430 /* Matrix.hpp */,
+				C3BAB523307DA01E00FEC430 /* Matrix.cpp */,
 				C3FF23C73058BDC4006AC486 /* UpAndOutCallOption.hpp */,
 				C3FF24033059D9B4006AC486 /* ContinuousTimeOption.h */,
 				C3FF24053059DBE9006AC486 /* ContinuousTimeOptionBase.h */,
@@ -354,6 +360,7 @@
 				C3FF24A4305B47FE006AC486 /* AsianCallOption.hpp in Headers */,
 				C356BC253054BEA200850E27 /* DigitalPutOption.hpp in Headers */,
 				C3FF24C3306F1A80006AC486 /* HedgingSimulator.hpp in Headers */,
+				C3BAB525307DA01E00FEC430 /* Matrix.hpp in Headers */,
 				C3FF23C93058BDC4006AC486 /* UpAndOutCallOption.hpp in Headers */,
 				C3FF24B5305D1F0C006AC486 /* ZeroCouponBond.hpp in Headers */,
 				C3FF24B9306C92BF006AC486 /* Portfolio.hpp in Headers */,
@@ -531,6 +538,7 @@
 				C356BC04304D7A7400850E27 /* MonteCarloPricer.cpp in Sources */,
 				C356BC05304D7A7400850E27 /* PieChart.cpp in Sources */,
 				C356BC06304D7A7400850E27 /* Polynomial.cpp in Sources */,
+				C3BAB524307DA01E00FEC430 /* Matrix.cpp in Sources */,
 				C3FF24B1305D1A8E006AC486 /* Stock.cpp in Sources */,
 				C3FF249D3059FF27006AC486 /* ContinuousTimeOptionBase.cpp in Sources */,
 				C356BC07304D7A7400850E27 /* PutOption.cpp in Sources */,

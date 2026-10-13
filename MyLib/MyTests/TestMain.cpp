@@ -16,6 +16,8 @@
 
 #include "HedgingSimulator.hpp"
 
+#include "Matrix.hpp"
+
 #include <filesystem>  // std::filesystem::current_path.
 #include <iostream>    // std::cout.
 
@@ -26,7 +28,6 @@ int main()
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
     
-
     std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
             
     std::cout << "Running the tests with the new framework...\n" << std::endl;
