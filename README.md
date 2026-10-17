@@ -69,14 +69,3 @@ If you want, I can add a small CMakeLists.txt or a top-level Makefile and exampl
   - Later chapters and your annotated variants (e.g., `chap_11_mag` likely contains your notes or extended solutions for chapter 11).
 
 Notes: Many chapter folders contain both original FMLib implementations and your refactored MyLib code; some folders include Xcode projects (`.xcodeproj`) and auxiliary outputs (CSV/HTML/PDF).
-
-## Suggested next small improvements I can make for you
-1. Add a top-level CMakeLists.txt and a small CMake target to build MyLib and one or two chapter examples cross-platform.
-2. Create a CONTRIBUTING.md with how you want collaborators to run examples and where to add new chapter work.
-3. Generate a table-of-contents section in this README linking to each chapter and its main example files.
-4. Add a short badge and a run/test script for quickly building a small example in CI.
-
-## Try asking
-- "Can you add a CMakeLists.txt that builds MyLib and chap_9_FMLib9/main.cpp?"
-- "Show me the API surface of MyLib: list public headers in MyLib/include and their classes/functions."
-- "Make a small example that runs the Monte Carlo pricer and outputs simulated_prices.csv, then add a script to build and run it."
