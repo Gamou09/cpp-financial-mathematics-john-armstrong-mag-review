@@ -40,4 +40,7 @@ void testPutCallParityWrapper() ;
 // chap 14
 void testHedingSimulator() ;
 
+// Chap 16
+void testMatrixConstructors();
+
 #endif /* TestFunctions_h */

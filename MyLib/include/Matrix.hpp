@@ -10,6 +10,8 @@
 
 #include "testing.hpp"
 
+#include <vector>
+#include <string>
 
 class Matrix {
 
@@ -60,6 +62,21 @@ public:
     /* Constructor */
     Matrix(int nrows, int ncols, bool zeros = 1 ) ;
     
+    /* Default constructor: creates a 1x1 zero matrix */
+    Matrix();
+
+    /* Construct a column vector from a std::vector.
+       Set asRow = true to construct a row vector instead. */
+    explicit Matrix(const std::vector<double>& values,
+                    bool asRow = false);
+
+    /* Construct a 1x1 matrix containing a scalar */
+    explicit Matrix(double scalar);
+
+    /* Construct a matrix from a string.
+       Example: "1,2,3;4,5,6" creates a 2x3 matrix. */
+    explicit Matrix(const std::string& contents);
+    
     /*
      Destructor function
      We don't have to inline the destructor
@@ -74,9 +91,74 @@ public:
      */
     
     // Danger: All classes that you wish to subclasses should have a virtual destructors !
-    
-    
     ~Matrix() { delete [] data ; }
+    
+    /* Acces a pointer to the first element */
+    /* For const objects: allows reading only. */
+    const double* begin() const {
+        return data;
+    }
+
+    /* Acces a pointer to the element after last */
+    /* For const objects: marks the end of the read-only range. */
+    const double* end() const {
+        return endPointer;
+    }
+
+    /* Acces a pointer to the first element */
+    /* For non-const objects: allows reading and modifying elements. */
+    double* begin() {
+        return data;
+    }
+
+    /* Acces a pointer to the element after last */
+    /* For non-const objects: marks the end of the modifiable range. */
+    double* end() {
+        return endPointer;
+    }
+
+    /* Multiply corresponding elements of two matrices
+        Hadamard or Shur product
+     */
+    Matrix times(const Matrix& other) const;
 };
+
+/* Add two matrices
+ NB - not a member function */
+Matrix operator+ (const Matrix& x, const Matrix& y) ;
+
+/* Add a scalar to every element of a matrix
+ NB - not a member function */
+Matrix operator+ (const Matrix& m, double scalar) ;
+
+/* Add a scalar to every element of a matrix (other way)
+ NB - not a member function */
+Matrix operator+ (double scalar, const Matrix& m) ;
+
+/* Subtract two matrices
+   NB - not a member function */
+Matrix operator- (const Matrix& x, const Matrix& y);
+
+/* Subtract a scalar from every element of a matrix
+   NB - not a member function */
+Matrix operator- (const Matrix& m, double scalar);
+
+/* Subtract every element of a matrix from a scalar
+   NB - not a member function */
+Matrix operator- (double scalar, const Matrix& m);
+
+/* Multiply two matrices using standard matrix multiplication
+   NB - not a member function */
+Matrix operator* (const Matrix& x, const Matrix& y);
+
+/* Multiply every element of a matrix by a scalar
+   NB - not a member function */
+Matrix operator* (const Matrix& m, double scalar);
+
+/* Multiply every element of a matrix by a scalar (other way)
+   NB - not a member function */
+Matrix operator* (double scalar, const Matrix& m);
+
+
 
 #endif /* Matrix_hpp */

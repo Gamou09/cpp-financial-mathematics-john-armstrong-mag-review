@@ -28,7 +28,9 @@ int main()
     std::cout << "Hello, World!\n";
     std::cout << "Welcome to my Test - where I prove what I built works\n\n";
     
-    std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
+    // std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
+    
+    Matrix m("1,2,3;4,5,6");
             
     std::cout << "Running the tests with the new framework...\n" << std::endl;
     
@@ -65,7 +67,10 @@ int main()
     testPutCallParityWrapper();
     
     // chap 14.3
-    testHedingSimulator(); 
+    testHedingSimulator();
+    
+    // chap 16.2.3
+    testMatrixConstructors();
     
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     
