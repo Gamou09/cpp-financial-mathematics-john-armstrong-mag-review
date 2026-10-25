@@ -72,6 +72,9 @@ int main()
     // chap 16.2.3
     testMatrixConstructors();
     
+    // chap 16.4.3
+    testMatrixComparisonOperators(); 
+    
     std::cout << "\n....................End of new testing framework..................... \n" << std::endl;
     
     std::cout << "Running the tests with the old framework...\n" << std::endl;

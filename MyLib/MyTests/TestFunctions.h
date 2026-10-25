@@ -42,5 +42,6 @@ void testHedingSimulator() ;
 
 // Chap 16
 void testMatrixConstructors();
+void testMatrixComparisonOperators() ; 
 
 #endif /* TestFunctions_h */

@@ -159,6 +159,27 @@ Matrix operator* (const Matrix& m, double scalar);
    NB - not a member function */
 Matrix operator* (double scalar, const Matrix& m);
 
+// Overloading comparison operators
 
+/* Comparison Operator
+    NB: not a member function
+ */
+/* Elementwise greater than */
+Matrix operator> (const Matrix& x, const Matrix& y);
+
+/* Elementwise greater than or equal to */
+Matrix operator>= (const Matrix& x, const Matrix& y);
+
+/* Elementwise equal to */
+Matrix operator== (const Matrix& x, const Matrix& y);
+
+/* Elementwise not equal to */
+Matrix operator!= (const Matrix& x, const Matrix& y);
+
+/* Elementwise less than */
+Matrix operator< (const Matrix& x, const Matrix& y);
+
+/* Elementwise less than or equal to */
+Matrix operator<= (const Matrix& x, const Matrix& y);
 
 #endif /* Matrix_hpp */

@@ -354,3 +354,126 @@ Matrix operator* (double scalar, const Matrix& m) {
      */
     return m * scalar;
 }
+
+/* Elementwise greater than */
+Matrix operator> (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    /*
+     * dest points to the next result element to write.
+     * s1 and s2 point to the next input elements to compare.
+     * The const pointers prevent modification of the input elements.
+     * end points one position beyond the last element of x.
+     *
+     * Each pointer advances by one element after it is dereferenced.
+     * A true comparison produces 1.0; a false comparison produces 0.0.
+     */
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) > *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
+
+/* Elementwise greater than or equal to */
+Matrix operator>= (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) >= *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
+
+/* Elementwise equal to */
+Matrix operator== (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) == *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
+
+/* Elementwise not equal to */
+Matrix operator!= (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) != *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
+
+/* Elementwise less than */
+Matrix operator< (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) < *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
+
+/* Elementwise less than or equal to */
+Matrix operator<= (const Matrix& x, const Matrix& y) {
+
+    ASSERT(x.nRows() == y.nRows() && x.nCols() == y.nCols());
+
+    Matrix ret(x.nRows(), x.nCols(), 0);
+
+    double* dest = ret.begin();
+    const double* s1 = x.begin();
+    const double* s2 = y.begin();
+    const double* end = x.end();
+
+    while (s1 != end) {
+        *(dest++) = (*(s1++) <= *(s2++)) ? 1.0 : 0.0;
+    }
+
+    return ret;
+}
